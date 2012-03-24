@@ -6,7 +6,7 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'haml'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,6 +18,19 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development, :test do
+  gem "rspec-rails", "~> 2.9.0"
+  gem "simplecov", ">= 0.6.1"
+  gem "jasmine", ">= 1.1.2"
+  gem "jslint_on_rails"
+end
+
+group :test do
+  gem "rr", "~> 1.0.4"
+  gem "machinist", "2.0.0"
+  gem "shoulda-matchers"
 end
 
 gem 'jquery-rails'
