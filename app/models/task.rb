@@ -1,4 +1,4 @@
 class Task < ActiveRecord::Base
   belongs_to :activity
-  belongs_to :task
+  has_many :secondary_tasks, :class_name => "Task"
 end
