@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328103853) do
+ActiveRecord::Schema.define(:version => 20120328111115) do
 
   create_table "achievements", :force => true do |t|
     t.integer  "task_id"
@@ -36,20 +36,20 @@ ActiveRecord::Schema.define(:version => 20120328103853) do
 
   add_index "activities", ["section_id"], :name => "index_activities_on_section_id"
 
+  create_table "activities_awards", :force => true do |t|
+    t.integer "awards_id"
+    t.integer "activities_id"
+  end
+
+  add_index "activities_awards", ["activities_id"], :name => "index_awards_activities_on_activities_id"
+  add_index "activities_awards", ["awards_id"], :name => "index_awards_activities_on_awards_id"
+
   create_table "awards", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
-
-  create_table "awards_activities", :force => true do |t|
-    t.integer "awards_id"
-    t.integer "activities_id"
-  end
-
-  add_index "awards_activities", ["activities_id"], :name => "index_awards_activities_on_activities_id"
-  add_index "awards_activities", ["awards_id"], :name => "index_awards_activities_on_awards_id"
 
   create_table "members", :force => true do |t|
     t.string   "name"
