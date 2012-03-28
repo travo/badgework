@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328102100) do
+ActiveRecord::Schema.define(:version => 20120328103853) do
 
   create_table "achievements", :force => true do |t|
     t.integer  "task_id"
@@ -66,12 +66,9 @@ ActiveRecord::Schema.define(:version => 20120328102100) do
 
   create_table "sections", :force => true do |t|
     t.string   "name"
-    t.integer  "troop_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  add_index "sections", ["troop_id"], :name => "index_sections_on_troop_id"
 
   create_table "tasks", :force => true do |t|
     t.text     "description"
