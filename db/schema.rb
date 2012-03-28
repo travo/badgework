@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120326111123) do
+ActiveRecord::Schema.define(:version => 20120328102100) do
+
+  create_table "achievements", :force => true do |t|
+    t.integer  "task_id"
+    t.integer  "member_id"
+    t.text     "signature"
+    t.date     "completion_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "achievements", ["member_id"], :name => "index_achievements_on_member_id"
+  add_index "achievements", ["task_id"], :name => "index_achievements_on_task_id"
 
   create_table "activities", :force => true do |t|
     t.string   "title"
