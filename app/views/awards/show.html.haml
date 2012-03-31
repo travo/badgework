@@ -1,0 +1,10 @@
+%h1= @award.title
+= @award.description.html_safe
+
+- @award.activities.each do |activity|
+  %h2= activity.title
+  = activity.description
+
+  - activity.tasks.each do |task|
+    = task.description
+    %br
