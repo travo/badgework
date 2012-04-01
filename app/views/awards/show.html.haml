@@ -1,10 +1,13 @@
 %h1= @award.title
 = @award.description.html_safe
 
-- @award.activities.each do |activity|
-  %h2= activity.title
-  = activity.description
+%ol
+  - @award.activities.each do |activity|
+    %li
+      %h4= activity.title
+      = activity.description
 
-  - activity.tasks.each do |task|
-    = task.description
-    %br
+      - unless activity.tasks.empty?
+        %ol.alphabetic
+          - activity.tasks.each do |task|
+            %li= task.description
