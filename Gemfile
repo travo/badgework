@@ -8,7 +8,6 @@ gem 'rails', '3.2.2'
 gem 'pg'
 gem 'haml'
 gem "inherited_resources"
-gem "slugged"
 
 # Gems used only for assets and not required
 # in production environments by default.
