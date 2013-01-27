@@ -1,4 +1,4 @@
-class AwardsController < ApplicationController
+class Admin::AwardsController < ApplicationController
 
   inherit_resources
 
