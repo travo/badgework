@@ -1,0 +1,5 @@
+%h1= "Edit #{@award.title}"
+
+= semantic_form_for @award do |f|
+  = f.inputs :title, :description
+  = f.actions
