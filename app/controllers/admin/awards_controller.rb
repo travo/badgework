@@ -2,7 +2,7 @@ class Admin::AwardsController < ApplicationController
 
   inherit_resources
 
-  before_filter :find_award, :only => :show
+  before_filter :find_award, :only => :edit
   before_filter :find_awards
 
   private
@@ -13,6 +13,7 @@ class Admin::AwardsController < ApplicationController
 
   def find_award
     @award = Award.find(params[:id])
+    @tasks = @award.tasks
   end
 
 end
