@@ -1,6 +1,5 @@
-%h1= "Edit #{@award.title}"
+%h1= "Edit #{@activity.title}"
 
-= semantic_form_for [@award, @achievement] do |f|
+= semantic_form_for admin_activities_path(@activity) do |f|
   = f.inputs :title, :description
-  = f.inputs :title, :description, :for => :achievement, :name => "Achievement"
   = f.actions

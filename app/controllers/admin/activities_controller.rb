@@ -11,7 +11,7 @@ class Admin::ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
-  def find_award
+  def find_activity
     @activity = Activity.find(params[:id])
     @tasks = @activity.tasks
   end
