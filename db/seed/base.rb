@@ -1,4 +1,5 @@
 require_relative 'scoutcraft'
+require_relative 'pioneer'
 
 module Seed
   class Base
