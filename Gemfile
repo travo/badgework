@@ -15,6 +15,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'pry'
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'jasmine'
