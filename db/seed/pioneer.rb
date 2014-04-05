@@ -96,7 +96,12 @@ module Seed
       activity = Activity.create(:awards => [citizenship], title: 'Community')
       Task.create(activity: activity, order: 1, description: 'With members of your Patrol, visit and organisation that serves your local community. Find out what service it provides and how it is organised. Such an organisation could be the local seat of government, community service agency, local TV or radio station, newspaper; urban or rural fire service, ambulance station, police station, emergecy services, forestry, sewerage authority etc.')
 
+      activity = Activity.create(:awards => [citizenship], title: 'Environment')
+      Task.create(activity: activity, order: 1, description: 'Complete one third of a project for the Landcare Badge')
+      Task.create(activity: activity, order: 2, description: 'Discuss with your family five ways in which they could be more environmentally friendly. Discuss these with your Patrol.')
 
+      activity = Activity.create(:awards => [citizenship], title: 'Fitness')
+      Task.create(activity: activity, order: 1, description: 'Show an understanding of a healthy lifestyle including the need for a proper diet, proper amount of sleep and the value of excercise.')
 
     end
 
