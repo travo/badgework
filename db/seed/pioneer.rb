@@ -65,6 +65,39 @@ module Seed
       activity = Activity.create(:awards => [campcraft], title: 'Camps')
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts have camped out in tents for a minimum of six nights.')
 
+      activity = Activity.create(:awards => [citizenship], title: 'Ethics')
+      Task.create(activity: activity, order: 1, description: 'Know and understand the Scout Promise and Law.')
+      Task.create(activity: activity, order: 2, description: 'Show your Scout Leader that your are doing your best to keep your Scout Promise and you are living by the Scout Law.')
+      Task.create(activity: activity, order: 3, description: 'Make up a prayer or similar for use at a Scout meeting or activity.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'First Aid')
+      Task.create(activity: activity, order: 1, description: 'Learn the correct method to obtain a response from an injured person.')
+      Task.create(activity: activity, order: 2, description: 'Learn how to find and check for circulation.')
+      Task.create(activity: activity, order: 3, description: 'Learn how and when to place a patient in the recovery position.')
+      Task.create(activity: activity, order: 4, description: 'Learn and demonstrate the treatments for snake and spider bites.')
+      Task.create(activity: activity, order: 5, description: 'Learn three of the causes of headache or fever.')
+      Task.create(activity: activity, order: 6, description: 'Learn the correct method for the management of wounds.')
+      Task.create(activity: activity, order: 7, description: 'Learn the principles of foot care, e.g. prevention and treatment of blisters.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Leadership')
+      Task.create(activity: activity, order: 1, description: 'Discuss with your Patrol Leader three different examples of times when your Patrol has worked as a team. Explain to your Patrol Leader how you believe this has helped your Patrol.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Good turn')
+      Task.create(activity: activity, order: 1, description: 'As a Scout participate in some form of community service. This must be a minimum of two hours, preferably outside of the Scout movement.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Heritage')
+      Task.create(activity: activity, order: 1, description: 'Know the meanings of three local place names and discuss these with your Patrol Leader.')
+      Task.create(activity: activity, order: 2, description: 'Name two cultures within your community that are different from your own and identify two ways in which each differs from your own. Discuss your findings with your Patrol Leader.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'With your Patrol, identify the services (e.g. health, education, leisure and social) that are available in your local area for young people of Scout age. These may be provided by your local government and/or other service providers. Present your findings to the Troop.')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts take part in a tour of your community, designed to help a visitor see and learn about it.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Community')
+      Task.create(activity: activity, order: 1, description: 'With members of your Patrol, visit and organisation that serves your local community. Find out what service it provides and how it is organised. Such an organisation could be the local seat of government, community service agency, local TV or radio station, newspaper; urban or rural fire service, ambulance station, police station, emergecy services, forestry, sewerage authority etc.')
+
+
+
     end
 
   end
