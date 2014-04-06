@@ -5,13 +5,12 @@ describe Member do
   let(:member) { Member.make! }
   let(:task) { Task.make! }
 
-  context "when achieving a task" do
+  context 'when achieving a task' do
 
-    it "records the achievement" do
-      member.achieve!(task)
+    it 'records the achievement' do
+      member.complete!(task)
       member.achievements.count.should == 1
     end
-
 
   end
 
