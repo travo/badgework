@@ -64,10 +64,47 @@ module Seed
       Task.create(activity: activity, order: 3, description: 'Pack and carry all appropriate gear and equipment, including food, water, tents etc.')
       Task.create(activity: activity, order: 4, description: 'Present a report to the Troop Council on completion.')
 
-      activity = Activity.create(:awards => [campcraft], title: 'Camps')
+      activity = Activity.create(:awards => [campcraft], title: 'Camps', required: true)
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts, have camped out in tents for a minimum of twelve nights.')
 
+      activity = Activity.create(:awards => [citizenship], title: 'Ethics', required: true)
+      Task.create(activity: activity, order: 1, description: 'Discuss with your Scout Leader the part that the Scout Promise and Law plays in your life.')
+      Task.create(activity: activity, order: 2, description: 'Assist your Patrol Leader in planning and running a Scouts Own at a Scout Camp or other Troop activity.')
 
+      activity = Activity.create(:awards => [citizenship], title: 'First Aid', required: true)
+      Task.create(activity: activity, order: 1, description: 'Demonstrate an understanding of the DRABCD principle.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate that you can carry out the requirements for first aid at Pioneer Citizenship level.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate two types of hand seats and one other way of moving an injured person.')
+      Task.create(activity: activity, order: 4, description: 'Be able to recognise the symptoms of shock and know how to treat a person who is suffering from shock.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Leadership', required: true)
+      Task.create(activity: activity, order: 1, description: 'Discuss with your Patrol Leader three examples of when you have had the opportunity to develop leadership skills during the Scout program.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Good Turn')
+      Task.create(activity: activity, order: 1, description: 'Complete a maintenance task to Scout property, e.g. painting, whipping rope ends, removing leaves from gutters, repairing Patrol box or other equipment (minimum service four hours).')
+      Task.create(activity: activity, order: 2, description: 'Participate in some form of community service that must be over a minimum of four hours (e.g. assist a service organisation, environmental organisation, hospital, etc).')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Heritage')
+      Task.create(activity: activity, order: 1, description: 'With your Patrol conduct an activity with an International theme.')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol, find out about some aspect of the history of your local area and make a short verbal or other presentation about your findings to the Troop. You might choose stories from the past, a person of historical note, a local historical site, a monument a museum, etc.')
+      Task.create(activity: activity, order: 3, description: 'With your Patrol plan, prepare and cook a meal from another culture.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts participate in and activity with Scouts from another District.')
+      Task.create(activity: activity, order: 2, description: 'Alone or with your Patrol plan a tour of your community designed to help a visitor see and learn about it, and either conduct a visitor on the tour or go as a Patrol.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Community')
+      Task.create(activity: activity, order: 1, description: 'Organise an activity or produce a chart for Cub Scouts on road bicycle safety.')
+      Task.create(activity: activity, order: 2, description: 'Prepare a chart for your hall or den showing appropriate contacts for the following emergencies: Poison, Fire, Injuries, Sick Animals, Damage to Roads and Bridges, Electricity, Phone, Gas and Water.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Environment')
+      Task.create(activity: activity, order: 1, description: 'Complete section A Investigate 1 (Knowledge) and 2 (Skill) of the World Conservation Badge.')
+      Task.create(activity: activity, order: 2, description: 'Complete the remaining two thirds of your project for the Landcare Badge.')
+      Task.create(activity: activity, order: 3, description: 'On a walk through your local community with your Patrol, identify and record ten ways in which your local community could be more environmentally friendly.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Fitness')
+      Task.create(activity: activity, order: 1, description: 'Lead a discussion with Pioneer level Scouts about a healthy lifestyle including the need for a proper diet, proper amount of sleep and value of exercise.')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts, participate in an activity that focuses on the value of exercise and sport as a part of a healthy lifestyle.')
 
     end
 
