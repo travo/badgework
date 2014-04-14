@@ -106,6 +106,24 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Lead a discussion with Pioneer level Scouts about a healthy lifestyle including the need for a proper diet, proper amount of sleep and value of exercise.')
       Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts, participate in an activity that focuses on the value of exercise and sport as a part of a healthy lifestyle.')
 
+      activity = Activity.create(:awards => [airactivities], title: 'Recognition')
+      Task.create(activity: activity, order: 1, description: 'Recognise by sight eight types of aircraft and discuss in detail at least two.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Weather')
+      Task.create(activity: activity, order: 1, description: 'Explain three elements of weather and the effects they have on flight performance.')
+      Task.create(activity: activity, order: 2, description: 'Explain three elements of weather and the effects they have on take off and landing of an aircraft or glider.')
+      Task.create(activity: activity, order: 3, description: 'Have a knowledge of weather patterns in your geographical area.')
+      Task.create(activity: activity, order: 4, description: 'Find out the difference in the terms "ground speed" and "air speed", and how they relate to headwinds and tailwinds.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Theory')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate an elementary knowledge of the principles and theory of flight.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate an elementary knowledge of the use in aircraft of an airspeed indicator, altimeter and magnetic compass.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate an elementary knowledge of how to read and apply the 24-hour clock and the phonetic alphabet.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate an elementary knowledge of the movable control surfaces of an aircraft and be able to describe their function (e.g. rudder, elevators, ailerons, flaps and trim tab).')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'After visiting a Scout Air Activity Centre and/or aerodrome with your Patrol or other Scouts, draw a map showing the location of hangars, control tower, runways, taxiways, tarmac, wind socks, the direction of the prevailing wind, fuel stores, navigation aids, and emergency facilities.')
+
     end
 
   end
