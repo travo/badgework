@@ -152,6 +152,27 @@ module Seed
       Task.create(activity: activity, order: 6, description: 'Take and active role in constructing a swing bridge suitable of carrying each Patrol member across a gap of at least 3m.')
       Task.create(activity: activity, order: 7, description: 'Take and active role in constructing another project of equivalent safety or difficulty approved by Troop Council.')
 
+      activity = Activity.create(:awards => [emergencies], title: 'Recognition')
+      Task.create(activity: activity, order: 1, description: 'Be able to suggest at least ten very different situations that could be classified as an emergency.')
+
+      activity = Activity.create(:awards => [emergencies], title: 'Knowledge')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate how to approach an unconscious patient.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate how to identify if the patient is breathing.')
+      Task.create(activity: activity, order: 3, description: 'Explain the difference between venous and arterial bleeding.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate how to control all forms of external bleeding.')
+      Task.create(activity: activity, order: 5, description: 'Demonstrate how to use the fire extinguisher in your Troop meeting place or home.')
+      Task.create(activity: activity, order: 6, description: 'Know on what type of fire it should be used / not used.')
+
+      activity = Activity.create(:awards => [emergencies], title: 'Visit')
+      Task.create(activity: activity, order: 1, description: 'Visit one of the locations listed in Pioneer Emergencies number 3.')
+      Task.create(activity: activity, order: 2, description: 'Arrange a visit to your Troop by a representative of one of the services listed in Pioneer Emergencies number 3.')
+
+      activity = Activity.create(:awards => [emergencies], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'By participating with your Patrol or other Scouts in two mock emergencies, demonstrate an understanding of the basic principles of first aid.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate the method of dealing with a patient in contact with a live electric wire.')
+      Task.create(activity: activity, order: 3, description: 'With your Patrol build a bush stretcher or an improvised stretcher.')
+      Task.create(activity: activity, order: 4, description: 'Use your improvised stretcher to carry a patient over a distance of 500m.')
+
     end
 
   end
