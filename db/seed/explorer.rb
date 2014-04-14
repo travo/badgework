@@ -17,7 +17,7 @@ module Seed
       emergencies    = Award.create(title: 'Explorer Emergencies', description: '')
       wateractivites = Award.create(title: 'Explorer Water Activities', description: '')
 
-      activity = Activity.create(:awards => [campcraft], title: 'Knots and Lashings')
+      activity = Activity.create(:awards => [campcraft, construction], title: 'Knots and Lashings')
       Task.create(activity: activity, order: 1, description: 'Assist a Scout in passing those knots and lashings required for Pioneer Level.')
       Task.create(activity: activity, order: 2, description: 'Learn to tie and use a bowline (or double figure of eight for synthetic rope).')
       Task.create(activity: activity, order: 3, description: 'Learn to tie and use a sheepshank.')
@@ -123,6 +123,34 @@ module Seed
 
       activity = Activity.create(:awards => [airactivities], title: 'Activity')
       Task.create(activity: activity, order: 1, description: 'After visiting a Scout Air Activity Centre and/or aerodrome with your Patrol or other Scouts, draw a map showing the location of hangars, control tower, runways, taxiways, tarmac, wind socks, the direction of the prevailing wind, fuel stores, navigation aids, and emergency facilities.')
+
+      activity = Activity.create(:awards => [construction], title: 'Planning')
+      Task.create(activity: activity, order: 1, description: 'Sketch and explain how you, along with your Patrol, would go about constructing a monkey suspension bridge to span about seven metres.')
+      Task.create(activity: activity, order: 2, description: 'Sketch and explain how you, along with your Patrol, would go about constructing a camp table or similarly complex equipment.')
+      Task.create(activity: activity, order: 3, description: 'Sketch and explain how you, along with your Patrol, would go about constructing a braced foot bridge with handrails to span about three metres.')
+      Task.create(activity: activity, order: 4, description: 'Assist another Scout to pass the requirements at Pioneer level for Planning.')
+
+      activity = Activity.create(:awards => [construction], title: 'Equipment and safety')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate how to care for and store ropes.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate how to care for construction tools.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate a knowledge of how ropes and pulleys work.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate a knowledge of how ropes and pulleys can be used to move heavy objects vertically and horizontally.')
+      Task.create(activity: activity, order: 5, description: 'Demonstrate trimming poles to length using a saw.')
+      Task.create(activity: activity, order: 6, description: 'Demonstrate pointing wooden pegs using an axe or tomahawk.')
+      Task.create(activity: activity, order: 7, description: 'Demonstrate sharpening of an axe or a tomahawk.')
+
+      activity = Activity.create(:awards => [construction], title: 'Knots')
+      Task.create(activity: activity, order: 1, description: 'Learn and demonstrate a double sheetbend.')
+      Task.create(activity: activity, order: 2, description: 'Learn and demonstrate a bowline on the bight.')
+
+      activity = Activity.create(:awards => [construction], title: 'Major projects')
+      Task.create(activity: activity, order: 1, description: 'Take and active role in constructing a braced footbridge at least 3m long.')
+      Task.create(activity: activity, order: 2, description: 'Take and active role in constructing a monkey suspension bridge spanning at least 7m.')
+      Task.create(activity: activity, order: 3, description: 'Take and active role in constructing a camp table or similar complex piece of camping equipment.')
+      Task.create(activity: activity, order: 4, description: 'Take and active role in constructing a tower with platform approximately 3m above the ground.')
+      Task.create(activity: activity, order: 5, description: 'Take and active role in constructing a ballista/catapult capable of propelling a projectile at least 10m.')
+      Task.create(activity: activity, order: 6, description: 'Take and active role in constructing a swing bridge suitable of carrying each Patrol member across a gap of at least 3m.')
+      Task.create(activity: activity, order: 7, description: 'Take and active role in constructing another project of equivalent safety or difficulty approved by Troop Council.')
 
     end
 
