@@ -8,8 +8,8 @@ class Member < ActiveRecord::Base
     achievements.create!(task: task, completion_date: Date.today)
   end
 
-  def completed?(award)
-    award.satisfied?(achievements.toward(award))
+  def completed?(award_or_activity)
+    award_or_activity.satisfied?(achievements)
   end
 
 end
