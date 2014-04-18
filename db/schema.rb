@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406013705) do
+ActiveRecord::Schema.define(version: 20140417040815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,8 @@ ActiveRecord::Schema.define(version: 20140406013705) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order"
-    t.boolean  "required",    default: false
+    t.boolean  "required",               default: false
+    t.integer  "completion_requirement"
   end
 
   add_index "activities", ["section_id"], name: "index_activities_on_section_id", using: :btree
@@ -53,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140406013705) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "activity_requirement"
+    t.integer  "completion_requirement"
   end
 
   create_table "members", force: true do |t|
@@ -82,6 +83,7 @@ ActiveRecord::Schema.define(version: 20140406013705) do
     t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "required",    default: false
   end
 
   add_index "tasks", ["activity_id"], name: "index_tasks_on_activity_id", using: :btree
