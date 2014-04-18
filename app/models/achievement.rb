@@ -6,6 +6,17 @@ class Achievement < ActiveRecord::Base
   scope :for_award,    ->(award)    { joins(task: {activity: :awards}).where('activities_awards.award_id = ?', award.id) }
   scope :for_activity, ->(activity) { joins(:task).where('tasks.activity_id = ?', activity.id) }
 
+  def self.for_target(target)
+    case target
+      when Award
+        for_award(target)
+      when Activity
+        for_activity(target)
+      else
+        []
+    end
+  end
+
   def self.record!(task, member)
     Achievement.new.record!(task, member)
   end

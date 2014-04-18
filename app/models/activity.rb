@@ -4,9 +4,8 @@ class Activity < ActiveRecord::Base
   has_and_belongs_to_many :awards
 
   def satisfied?(achievements)
-    related_achievements = achievements.for_activity(self)
-    return false if related_achievements.empty?
-    satisfied_task_requirements?(related_achievements)
+    return false if achievements.empty?
+    satisfied_task_requirements?(achievements)
   end
 
   private

@@ -4,9 +4,8 @@ class Award < ActiveRecord::Base
   accepts_nested_attributes_for :activities
 
   def satisfied?(achievements)
-    related_achievements = achievements.for_award(self)
-    return false if related_achievements.empty?
-    satisfied_activity_requirements?(related_achievements)
+    return false if achievements.empty?
+    satisfied_activity_requirements?(achievements)
   end
 
   private
