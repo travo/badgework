@@ -10,7 +10,7 @@ describe Award do
 
     describe 'when all activities must be completed' do
 
-      let!(:award)  { Award.create(title: 'Test Award', activity_requirement: 3) }
+      let!(:award)  { Award.create(title: 'Test Award', completion_requirement: 3) }
       let!(:a1) { Activity.create(awards: [award], title: 'Activity One') }
       let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test')}
       let!(:a2) { Activity.create(awards: [award], title: 'Activity Two') }
@@ -34,7 +34,7 @@ describe Award do
 
     describe 'when one activity is compulsory and one (out of two others) optional' do
 
-      let!(:award)  { Award.create(title: 'Test Award', activity_requirement: 2) }
+      let!(:award)  { Award.create(title: 'Test Award', completion_requirement: 2) }
       let!(:a1) { Activity.create(awards: [award], title: 'Activity One', required: true) }
       let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test')}
       let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', required: nil) }
