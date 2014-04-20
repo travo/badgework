@@ -11,7 +11,7 @@ describe Activity do
 
     describe 'when all tasks must be completed' do
 
-      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', completion_requirement: 3) }
+      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 3) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test')}
       let!(:t2) { Task.create(activity: activity, order: 2, description: 'Test')}
       let!(:t3) { Task.create(activity: activity, order: 3, description: 'Test')}
@@ -32,7 +32,7 @@ describe Activity do
 
     describe 'when one task is compulsory and one (out of two others) optional' do
 
-      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', completion_requirement: 2) }
+      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 2) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test', required: true)}
       let!(:t2) { Task.create(activity: activity, order: 1, description: 'Test', required: nil)}
       let!(:t3) { Task.create(activity: activity, order: 1, description: 'Test', required: nil)}

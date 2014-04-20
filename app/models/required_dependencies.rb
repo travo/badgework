@@ -10,7 +10,7 @@ module RequiredDependencies
   def dependencies_satisfied?(achievements)
     submission = breakdown(achievements)
     return false if submission[:required] < minimum_required
-    submission[:required] + submission[:optional] >= completion_requirement
+    submission[:required] + submission[:optional] >= requirement
   end
 
   def breakdown(achievements)
