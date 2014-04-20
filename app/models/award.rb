@@ -13,7 +13,9 @@ class Award < ActiveRecord::Base
 
   def completed_dependencies(achievements)
     activities = achievements.map(&:task).map(&:activity).flatten
-    binding.pry
+    activities.map do |activity|
+      activity if activity.satisfied?(achievements.for_activity(activity))
+    end.compact
   end
 
 end

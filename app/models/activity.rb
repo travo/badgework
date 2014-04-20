@@ -12,7 +12,7 @@ class Activity < ActiveRecord::Base
   end
 
   def completed_dependencies(achievements)
-    achievements.map(&:task)
+    achievements.map(&:task) || []
   end
 
 end

@@ -11,12 +11,12 @@ describe Award do
     describe 'when all activities must be completed' do
 
       let!(:award)  { Award.create(title: 'Test Award', completion_requirement: 3) }
-      let!(:a1) { Activity.create(awards: [award], title: 'Activity One') }
-      let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test')}
-      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two') }
-      let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test')}
-      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three') }
-      let!(:t3) { Task.create(activity: a3, order: 1, description: 'Test')}
+      let!(:a1) { Activity.create(awards: [award], title: 'Activity One', completion_requirement: 1) }
+      let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test', required: true)}
+      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', completion_requirement: 1) }
+      let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test', required: true)}
+      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three', completion_requirement: 1) }
+      let!(:t3) { Task.create(activity: a3, order: 1, description: 'Test', required: true)}
 
       it 'correctly indicates completion (some done)' do
         member.complete!(t1)
@@ -32,15 +32,34 @@ describe Award do
 
     end
 
+    describe 'when all activites — and required tasks must be completed' do
+
+      let!(:award)  { Award.create(title: 'Test Award', completion_requirement: 2) }
+      let!(:a1) { Activity.create(awards: [award], title: 'Activity One', completion_requirement: 1) }
+      let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test')}
+      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', completion_requirement: 2) }
+      let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test', required: true)}
+      let!(:t3) { Task.create(activity: a2, order: 1, description: 'Test', required: true)}
+      let!(:t4) { Task.create(activity: a2, order: 1, description: 'Test', required: false)}
+
+      it 'correctly indicates completion (some done)' do
+        member.complete!(t1)
+        member.complete!(t2)
+        member.complete!(t4)
+        expect(member.completed?(award)).to be_false
+      end
+
+    end
+
     describe 'when one activity is compulsory and one (out of two others) optional' do
 
       let!(:award)  { Award.create(title: 'Test Award', completion_requirement: 2) }
-      let!(:a1) { Activity.create(awards: [award], title: 'Activity One', required: true) }
-      let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test')}
-      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', required: nil) }
-      let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test')}
-      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three', required: nil) }
-      let!(:t3) { Task.create(activity: a3, order: 1, description: 'Test')}
+      let!(:a1) { Activity.create(awards: [award], title: 'Activity One', required: true, completion_requirement: 1) }
+      let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test', required: true)}
+      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', required: nil, completion_requirement: 1) }
+      let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test', required: true)}
+      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three', required: nil, completion_requirement: 1) }
+      let!(:t3) { Task.create(activity: a3, order: 1, description: 'Test', required: true)}
 
       it 'correctly indicates incompletion (one optional done)' do
         member.complete!(t2)
