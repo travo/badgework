@@ -1,8 +1,0 @@
-%ul
-  - @awards.each do |award|
-    %li
-      = link_to(award.title, edit_admin_award_path(award))
-
-
-%p
-  = link_to("New Award", new_admin_award_path)

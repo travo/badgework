@@ -1,8 +1,0 @@
-%ul
-  - @activities.each do |activity|
-    %li
-      = link_to(activity.title, edit_admin_activity_path(activity))
-
-
-%p
-  = link_to("New Activity", new_admin_activity_path)

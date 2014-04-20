@@ -1,6 +1,0 @@
-%h1= "Edit #{@award.title}"
-
-= semantic_form_for admin_award_path(@award), :html => { :method => :put } do |f|
-  = f.inputs :title, :description
-  = f.inputs :title, :description, :for => :achievement, :name => "Achievement"
-  = f.actions
