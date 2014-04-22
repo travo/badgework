@@ -30,6 +30,32 @@ describe Activity do
 
     end
 
+    describe 'determining requiement when requirement is zero' do
+
+      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 0) }
+      let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test', required: true)}
+      let!(:t2) { Task.create(activity: activity, order: 2, description: 'Test', required: true)}
+      let!(:t3) { Task.create(activity: activity, order: 3, description: 'Test', required: false)}
+
+      it 'is incomplete when one required dependency is completed' do
+        member.complete!(t1)
+        expect(member.completed?(activity)).to be_false
+      end
+
+      it 'is incomplete when one required dependency and one optional dependency is completed' do
+        member.complete!(t1)
+        member.complete!(t3)
+        expect(member.completed?(activity)).to be_false
+      end
+
+      it 'is complete when both required dependencies are completed' do
+        member.complete!(t1)
+        member.complete!(t2)
+        expect(member.completed?(activity)).to be_true
+      end
+
+    end
+
     describe 'when one task is compulsory and one (out of two others) optional' do
 
       let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 2) }
