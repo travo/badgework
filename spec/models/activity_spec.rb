@@ -34,8 +34,8 @@ describe Activity do
 
       let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 2) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test', required: true)}
-      let!(:t2) { Task.create(activity: activity, order: 1, description: 'Test', required: nil)}
-      let!(:t3) { Task.create(activity: activity, order: 1, description: 'Test', required: nil)}
+      let!(:t2) { Task.create(activity: activity, order: 1, description: 'Test', required: false)}
+      let!(:t3) { Task.create(activity: activity, order: 1, description: 'Test', required: false)}
 
       it 'correctly indicates incompletion (one optional done)' do
         member.complete!(t2)

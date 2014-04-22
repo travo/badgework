@@ -56,9 +56,9 @@ describe Award do
       let!(:award)  { Award.create(title: 'Test Award', requirement: 2) }
       let!(:a1) { Activity.create(awards: [award], title: 'Activity One', required: true, requirement: 1) }
       let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test', required: true)}
-      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', required: nil, requirement: 1) }
+      let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', required: false, requirement: 1) }
       let!(:t2) { Task.create(activity: a2, order: 1, description: 'Test', required: true)}
-      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three', required: nil, requirement: 1) }
+      let!(:a3) { Activity.create(awards: [award], title: 'Activity Three', required: false, requirement: 1) }
       let!(:t3) { Task.create(activity: a3, order: 1, description: 'Test', required: true)}
 
       it 'correctly indicates incompletion (one optional done)' do
