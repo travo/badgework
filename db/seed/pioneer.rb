@@ -8,14 +8,14 @@ module Seed
       cord    = Award.create(title: 'Pioneer Cord')
 
       campcraft      = Award.create(title: 'Pioneer Campcraft', description: '')
-      citizenship    = Award.create(title: 'Pioneer Citizenship', description: '')
+      citizenship    = Award.create(title: 'Pioneer Citizenship', description: '', requirement: 7)
 
-      airactivities  = Award.create(title: 'Pioneer Air Activities', description: '')
+      airactivities  = Award.create(title: 'Pioneer Air Activities', description: '', requirement: 4)
       construction   = Award.create(title: 'Pioneer Construction', description: '')
+      emergencies    = Award.create(title: 'Pioneer Emergencies', description: '')
       environment    = Award.create(title: 'Pioneer Environment', description: '')
       watersafety    = Award.create(title: 'Pioneer Water Safety', description: '')
-      emergencies    = Award.create(title: 'Pioneer Emergencies', description: '')
-      wateractivites = Award.create(title: 'Pioneer Water Activities', description: '')
+      wateractivites = Award.create(title: 'Pioneer Water Activities', description: '', requirement: 5)
 
       activity = Activity.create(:awards => [campcraft, construction, wateractivites], title: 'Knots and Lashings')
       Task.create(activity: activity, order: 1, description: 'Learn a square lashing')
@@ -65,12 +65,12 @@ module Seed
       activity = Activity.create(:awards => [campcraft], title: 'Camps')
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts have camped out in tents for a minimum of six nights.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Ethics', required: true)
+      activity = Activity.create(:awards => [citizenship], title: 'Ethics')
       Task.create(activity: activity, order: 1, description: 'Know and understand the Scout Promise and Law.')
       Task.create(activity: activity, order: 2, description: 'Show your Scout Leader that your are doing your best to keep your Scout Promise and you are living by the Scout Law.')
       Task.create(activity: activity, order: 3, description: 'Make up a prayer or similar for use at a Scout meeting or activity.')
 
-      activity = Activity.create(:awards => [citizenship, wateractivites, watersafety], title: 'First Aid', required: true)
+      activity = Activity.create(:awards => [citizenship, wateractivites, watersafety], title: 'First Aid')
       Task.create(activity: activity, order: 1, description: 'Learn the correct method to obtain a response from an injured person.')
       Task.create(activity: activity, order: 2, description: 'Learn how to find and check for circulation.')
       Task.create(activity: activity, order: 3, description: 'Learn how and when to place a patient in the recovery position.')
@@ -79,39 +79,39 @@ module Seed
       Task.create(activity: activity, order: 6, description: 'Learn the correct method for the management of wounds.')
       Task.create(activity: activity, order: 7, description: 'Learn the principles of foot care, e.g. prevention and treatment of blisters.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Leadership', required: true)
+      activity = Activity.create(:awards => [citizenship], title: 'Leadership')
       Task.create(activity: activity, order: 1, description: 'Discuss with your Patrol Leader three different examples of times when your Patrol has worked as a team. Explain to your Patrol Leader how you believe this has helped your Patrol.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Good turn', required: true)
+      activity = Activity.create(:awards => [citizenship], title: 'Good turn')
       Task.create(activity: activity, order: 1, description: 'As a Scout participate in some form of community service. This must be a minimum of two hours, preferably outside of the Scout movement.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Heritage')
+      activity = Activity.create(:awards => [citizenship], title: 'Heritage', required: false)
       Task.create(activity: activity, order: 1, description: 'Know the meanings of three local place names and discuss these with your Patrol Leader.')
       Task.create(activity: activity, order: 2, description: 'Name two cultures within your community that are different from your own and identify two ways in which each differs from your own. Discuss your findings with your Patrol Leader.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Activity')
+      activity = Activity.create(:awards => [citizenship], title: 'Activity', required: false)
       Task.create(activity: activity, order: 1, description: 'With your Patrol, identify the services (e.g. health, education, leisure and social) that are available in your local area for young people of Scout age. These may be provided by your local government and/or other service providers. Present your findings to the Troop.')
       Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts take part in a tour of your community, designed to help a visitor see and learn about it.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Community')
+      activity = Activity.create(:awards => [citizenship], title: 'Community', required: false)
       Task.create(activity: activity, order: 1, description: 'With members of your Patrol, visit and organisation that serves your local community. Find out what service it provides and how it is organised. Such an organisation could be the local seat of government, community service agency, local TV or radio station, newspaper; urban or rural fire service, ambulance station, police station, emergecy services, forestry, sewerage authority etc.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Environment')
+      activity = Activity.create(:awards => [citizenship], title: 'Environment', required: false)
       Task.create(activity: activity, order: 1, description: 'Complete one third of a project for the Landcare Badge')
       Task.create(activity: activity, order: 2, description: 'Discuss with your family five ways in which they could be more environmentally friendly. Discuss these with your Patrol.')
 
-      activity = Activity.create(:awards => [citizenship], title: 'Fitness')
+      activity = Activity.create(:awards => [citizenship], title: 'Fitness', required: false)
       Task.create(activity: activity, order: 1, description: 'Show an understanding of a healthy lifestyle including the need for a proper diet, proper amount of sleep and the value of exercise.')
 
 
-      activity = Activity.create(:awards => [airactivities], title: 'Recognition', required: true)
+      activity = Activity.create(:awards => [airactivities], title: 'Recognition')
       Task.create(activity: activity, order: 1, description: 'Be able to recognise four different types of aircraft by sight and know their function.')
 
-      activity = Activity.create(:awards => [airactivities], title: 'Weather', required: true)
+      activity = Activity.create(:awards => [airactivities], title: 'Weather')
       Task.create(activity: activity, order: 1, description: 'Explain how the three elements of weather can have an effect on the flight performance of an aircraft.')
       Task.create(activity: activity, order: 2, description: 'Be able to recognise four signs of changes in the weather in your geographical area.')
 
-      activity = Activity.create(:awards => [airactivities], title: 'Theory', required: true)
+      activity = Activity.create(:awards => [airactivities], title: 'Theory')
       Task.create(activity: activity, order: 1, description: 'Know the difference between a monoplane and a biplane.')
       Task.create(activity: activity, order: 2, description: 'Using a model or pictures of an aircraft describe the following parts: fuselage, mainplane, tailplane, undercarriage, leading edge, trailing edge, rudder, aileron, tailfin, flaps, trimtab.')
 
@@ -129,44 +129,44 @@ module Seed
       activity = Activity.create(:awards => [airactivities], title: 'Experience')
       Task.create(activity: activity, order: 1, description: 'Have a flight in a light aircraft or glider.')
 
-      activity = Activity.create(:awards => [construction], title: 'Planning', required: true)
+      activity = Activity.create(:awards => [construction], title: 'Planning')
       Task.create(activity: activity, order: 1, description: 'Sketch and explain how you and your Patrol would build a flagpole about five meters high using at least two lengths of material.')
       Task.create(activity: activity, order: 2, description: 'Sketch and explain how you and your Patrol would build a Scout chariot.')
       Task.create(activity: activity, order: 3, description: 'Sketch and explain how you and your Patrol would build a camp wash stand or similar simple equipment.')
 
-      activity = Activity.create(:awards => [construction], title: 'Equipment and safety', required: true)
+      activity = Activity.create(:awards => [construction], title: 'Equipment and safety')
       Task.create(activity: activity, order: 1, description: 'Know how to select suitably sized poles and ropes required for the structures mentioned in Planning.')
       Task.create(activity: activity, order: 2, description: 'Know how to trim poles to length using a bush saw.')
       Task.create(activity: activity, order: 3, description: 'Explain the safety precautions necessary when constructing raised structures using poles and spars.')
 
-      activity = Activity.create(:awards => [construction], title: 'Knots and lashings', required: true)
+      activity = Activity.create(:awards => [construction], title: 'Knots and lashings')
       Task.create(activity: activity, order: 1, description: 'Know how to tie two types of holdfasts and anchorages.')
 
-      activity = Activity.create(:awards => [construction], title: 'Projects', required: true)
+      activity = Activity.create(:awards => [construction], title: 'Projects')
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts take part in erecting a flagpole about three metres high, using at least two lengths of material which need not be wood.')
       Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts take part in the building of a Scout chariot.')
       Task.create(activity: activity, order: 3, description: 'With your Patrol or other Scouts take part in the construction of a camp washstand or similar simple equipment.')
 
-      activity = Activity.create(:awards => [emergencies], title: 'Recognition', required: true)
+      activity = Activity.create(:awards => [emergencies], title: 'Recognition')
       Task.create(activity: activity, order: 1, description: 'Be able to suggest at least five different situations that could be classified as an emergency.')
 
-      activity = Activity.create(:awards => [emergencies], title: 'Knowledge', required: true)
+      activity = Activity.create(:awards => [emergencies], title: 'Knowledge')
       Task.create(activity: activity, order: 1, description: 'Learn the importance of checking for any dangers to yourself and others before approaching an unconscious person.')
       Task.create(activity: activity, order: 2, description: 'Learn how to correctly check if a person is breathing.')
       Task.create(activity: activity, order: 3, description: 'Learn the common causes of a blocked airway and how to clear it.')
       Task.create(activity: activity, order: 4, description: 'Learn how to open the airway.')
 
-      activity = Activity.create(:awards => [emergencies], title: 'Visit', required: true)
+      activity = Activity.create(:awards => [emergencies], title: 'Visit')
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts visit on of the following locations and report on their preparations for particular emergencies: Fire Station, Police Operations Room, State Emergency Services Station, Casualty at a Public Hospital, Ambulance Station, Surf Life Saving Club, Meals on Wheels kitchen, Railway Breakdown Crew, An Airport, Quarantine Station, Air/Sea Rescue Station.')
 
-      activity = Activity.create(:awards => [emergencies], title: 'Treatment', required: true)
+      activity = Activity.create(:awards => [emergencies], title: 'Treatment')
       Task.create(activity: activity, order: 1, description: 'Learn how to control bleeding from a badly cut arm or leg.')
       Task.create(activity: activity, order: 2, description: 'Learn how to treat a nose bleed.')
       Task.create(activity: activity, order: 3, description: 'Know four uses for a triangular bandage.')
       Task.create(activity: activity, order: 4, description: 'Learn the treatment for minor burns and scalds sustained at camp.')
       Task.create(activity: activity, order: 5, description: 'Learn how to treat fractures to the lower arm and leg.')
 
-      activity = Activity.create(:awards => [emergencies], title: 'Activity', required: true)
+      activity = Activity.create(:awards => [emergencies], title: 'Activity')
       Task.create(activity: activity, order: 1, description: 'Learn two types of hand seats and know when each should be used.')
       Task.create(activity: activity, order: 2, description: 'Assist in carrying a patient on a stretcher.')
       Task.create(activity: activity, order: 3, description: 'With another Scout inspect your Troop meeting place or home garage/storage shed.')
@@ -196,21 +196,21 @@ module Seed
       Task.create(activity: activity, order: 2, description: 'Document your findings from your visit to your local waste disposal system.')
       Task.create(activity: activity, order: 3, description: 'Visit or contact and organisation devoted to protecting the local environment. Find out what aspects they cover (such as flora, fauna, vegetation, waterways) and help out on a service activity for a total of four hours.')
 
-      activity = Activity.create(:awards => [wateractivites], title: 'Weather', required: true)
+      activity = Activity.create(:awards => [wateractivites], title: 'Weather')
       Task.create(activity: activity, order: 1, description: 'Be able to locate weather forecasting information appropriate for your activity requirements.')
       Task.create(activity: activity, order: 2, description: 'Explain the effects of weather on canoeing, sailing or rowing.')
 
-      activity = Activity.create(:awards => [wateractivites], title: 'Safety', required: true)
+      activity = Activity.create(:awards => [wateractivites], title: 'Safety')
       Task.create(activity: activity, order: 1, description: 'Demonstrate wearing an approved personal floatation device and know when it should be worn while boating.')
       Task.create(activity: activity, order: 2, description: 'Without a personal floatation device — stay afloat for three minutes.')
       Task.create(activity: activity, order: 3, description: 'Be able to swim 50 metres.')
       Task.create(activity: activity, order: 4, description: 'Explain the importance of staying wiht an overturned boat and never boating alone.')
 
-      activity = Activity.create(:awards => [wateractivites], title: 'First aid', required: true)
+      activity = Activity.create(:awards => [wateractivites], title: 'First aid')
       Task.create(activity: activity, order: 1, description: 'Know the most frequent medical hazards associated with boating (sunburn, eyestrain, sunstroke, seasickness, immersion, hypothermia).')
       Task.create(activity: activity, order: 2, description: 'Know the appropriate treatment for sunburn, eyestrain, sunstroke, seasickness, immersion and hypothermia and precautions to avoid them.')
 
-      activity = Activity.create(:awards => [wateractivites], title: 'Knots', required: true)
+      activity = Activity.create(:awards => [wateractivites], title: 'Knots')
       Task.create(activity: activity, order: 1, description: 'Learn the figure of eight knot.')
       Task.create(activity: activity, order: 2, description: 'Learn the anchor or fisherman\'s bend.')
       Task.create(activity: activity, order: 3, description: 'Learn the bowline.')

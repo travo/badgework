@@ -8,14 +8,14 @@ module Seed
       cord     = Award.create(title: 'Explorer Cord')
 
       campcraft      = Award.create(title: 'Explorer Campcraft', description: '')
-      citizenship    = Award.create(title: 'Explorer Citizenship', description: '')
+      citizenship    = Award.create(title: 'Explorer Citizenship', description: '', requirement: 7)
 
       airactivities  = Award.create(title: 'Explorer Air Activities', description: '')
       construction   = Award.create(title: 'Explorer Construction', description: '')
-      environment    = Award.create(title: 'Explorer Environment', description: '')
-      watersafety    = Award.create(title: 'Explorer Water Safety', description: '')
       emergencies    = Award.create(title: 'Explorer Emergencies', description: '')
-      wateractivites = Award.create(title: 'Explorer Water Activities', description: '')
+      environment    = Award.create(title: 'Explorer Environment', description: '', requirement: 5)
+      watersafety    = Award.create(title: 'Explorer Water Safety', description: '')
+      wateractivites = Award.create(title: 'Explorer Water Activities', description: '', requirement: 7)
 
       activity = Activity.create(:awards => [campcraft, construction], title: 'Knots and Lashings')
       Task.create(activity: activity, order: 1, description: 'Assist a Scout in passing those knots and lashings required for Pioneer Level.')
