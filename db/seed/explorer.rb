@@ -173,6 +173,26 @@ module Seed
       Task.create(activity: activity, order: 3, description: 'With your Patrol build a bush stretcher or an improvised stretcher.')
       Task.create(activity: activity, order: 4, description: 'Use your improvised stretcher to carry a patient over a distance of 500m.')
 
+      activity = Activity.create(:awards => [environment], title: 'Nature')
+      Task.create(activity: activity, order: 1, description: 'Identify a region within your community which has had an environmental effect on plant, wildlife and insect population from any of the following: salinity, soil erosion, poor water quality, introduced species (either animal or plant), removal of bush land, waterway.')
+      Task.create(activity: activity, order: 2, description: 'Discuss with your Patrol how wildlife, plants and insects depend on each other for survival.')
+      Task.create(activity: activity, order: 3, description: 'Devise an action plan for improvement.')
+
+      activity = Activity.create(:awards => [environment], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'With a group of Scouts, design and produce and environmental educational presentation such as a poster, demonstration or activity.')
+      Task.create(activity: activity, order: 2, description: 'Use your presentation to show how introduced species of animal or plant life have had an impact on the environment and what can be done to improve the present situation.')
+      Task.create(activity: activity, order: 3, description: 'Present your findings to your chosen audience.')
+
+      activity = Activity.create(:awards => [environment], title: 'Visit')
+      Task.create(activity: activity, order: 1, description: 'Visit or contact an organisation devoted to protecting the local or national environment.')
+      Task.create(activity: activity, order: 2, description: 'Find out what aspects they cover such as flora, fauna, vegetation or waterways.')
+      Task.create(activity: activity, order: 3, description: 'Help out on a service activity for a total of eight hours.')
+
+      activity = Activity.create(:awards => [environment], title: 'Recycling', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'With members of your Patrol participate in a recycling activity of at least 8 hours concentrating on either separation of recyclables, composting or waste reduction (a cleanup, bottle drive, worm farm) and afterwards report the outcome to your Troop.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Prepare an evaluation of your local waste disposal system and suggest improvements.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Where possible, visit and installation such as a local rubbish tip, transfer station, recycling facility or sewerage plan and report on your visit and suggest any changes that you think could be made.', required: false)
+
     end
 
   end
