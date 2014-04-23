@@ -263,6 +263,24 @@ module Seed
       Task.create(activity: activity, order: 2, description: 'Learn and know the parts of engines.')
       Task.create(activity: activity, order: 3, description: 'Participate in a power boat crew for a minimum of 6 hours.')
 
+      activity = Activity.create(:awards => [watersafety], title: 'Water safety')
+      Task.create(activity: activity, order: 1, description: 'Perform a forward roll into deep water, fully clothed and swim 25 metres. Remove clothing, retaining one item to use as a towing aid')
+      Task.create(activity: activity, order: 1, description: 'Use the item of clothing retained to tow a conscious, cooperative patient 20 metres, avoiding contact at all times.')
+      Task.create(activity: activity, order: 1, description: 'Swim 100 metres without an APFD, including 50 metres using any of the resting strokes.')
+      Task.create(activity: activity, order: 1, description: 'Remain afloat for at least four minutes without the use of an APFD.')
+      Task.create(activity: activity, order: 1, description: 'Put on an APFD in deep water and swim 50 metres. Demonstrate the "HELP" position.')
+      Task.create(activity: activity, order: 1, description: 'With at least two other Scouts demonstrate the "huddle" position.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Rescue')
+      Task.create(activity: activity, order: 1, description: 'Perform a simulated rescue using an improvised floatation device, use a safety jump to enter the water and swim to a conscious patient at least ten metres from shore. Use any to method to return the patient to the shore.')
+      Task.create(activity: activity, order: 2, description: 'Perform an assisted carry with approach and tow of a least 30 metres with a fully clothed conscious patient.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Safety')
+      Task.create(activity: activity, order: 1, description: 'Present to the Adviser a list of at least ten major safety items suggested by clubs active in one of the followin: swimming, yachting, power boating, surfing, water skiing, canoeing, scuba diving, board diving.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Experience')
+      Task.create(activity: activity, order: 1, description: 'Pass the requirements of Emergencies at the Explorer level.')
+
     end
 
   end
