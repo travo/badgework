@@ -17,6 +17,7 @@ module Seed
       Scoutcraft.seed
       Pioneer.seed
       Explorer.seed
+      Adventurer.seed
 
     end
 
