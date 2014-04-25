@@ -1,0 +1,592 @@
+proficiency = Award.create(title: 'Abseiling', description: 'To gain the Abseiling badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C. Participants must have attained the age of 11 years. Abseil must be single pitch, no greater than 50 metres. All abseiling activities to comply with State safety regulations.')
+
+activity = Activity.create(:awards => [proficiency], title: 'Demonstrate')
+Task.create(activity: activity, order: 1, description: '')
+
+activity = Activity.create(:awards => [proficiency], title: 'Skill')
+
+
+activity = Activity.create(:awards => [proficiency], title: 'Activity')
+
+
+A. Demonstrate
+Prior to abseil, demonstrate precautions applicable to abseiling including:
+    approaching cliffs
+    safe distance to cliff edge
+    the need to restrain loose hair and clothing
+    knowledge of standard communication conventions used in abseiling.
+
+B. Skill
+Demonstrate thorough knowledge of:
+    tape knot, including tie offs
+    figure 8 on a bight
+    the correct fitting of a harness
+    clipping onto the abseil rope
+    checking the system and the importance of having a second person check the system
+    a mock abseil on flat ground
+    suitable protective clothing for all seasons
+    the importance of using appropriate equipment and ropes
+    the basic rules for the use and care of equipment.
+C. Activity
+Undertake five abseils.
+
+
+
+To gain the Agriculture badge you must complete one task from each of A, B and C.
+Show that you have gained a broad understanding of agriculture and a more detailed knowledge of a specific interest in a field related to agriculture.
+Range: farming, gardening, fishery, forestry, resource management, pesticide and fertilizer usage
+
+A. INVESTIGATE
+Either by discussion with your Adviser or by an illustrated talk to your Patrol or other Scouts, show that you have an understanding of:
+    the main stages in growing cycle applicable to your chosen topic
+    the basic skills applicable to your chosen area of agriculture.
+After discussion with your Adviser, undertake a project appropriate to your chosen topic. Your project might be based on at least one of the following from skill and activity segments.
+B. SKILL
+Spend at least 10 hours helping with planting, caring for and harvesting at crop.
+Photograph each stage of the crop and show your Patrol how the product is dealt with, and teach your Patrol how the crop is planted and harvested.
+Assist in banding birds, tagging fish or in some other work on a flora or fauna reserve, or assist a National Parks Service or Forestry service in performing appropriate work.
+C. ACTIVITY
+Plan and plant a flower display garden of a least 10 square metres (or a vegetable garden of at least 20 square metres) throughout one complete growing season.
+Make a compost heap, and understand and explain the principles of manuring, both natural and artificial.
+
+
+
+
+To gain the Animal Keepers badge you must complete one task from each of A, B and C.
+Show that you have an interest in, have learnt about and have improved your knowledge of caring for an animal.
+Range: Any animal can qualify for consideration in this badge BUT it must be legal to keep the animal as a domestic pet in your State.
+A INVESTIGATE
+Find out the local laws and regulations that relate to how you must keep your animal.
+Find out the history of the species of animal for which you care (e.g. country of origin etc).
+Know the conditions required for breeding your animal.
+B SKILL
+Learn how to treat three ailments that could be suffered by your animal.
+Learn how to build a shelter adequate to protect your animal from the elements.
+Learn how to train your animal (e.g. dogs to be obedient, birds to talk etc). You are also required to give a presentation to your Patrol or Troop in a form selected by yourself on how to care for your animal.
+C ACTIVITY
+Care for your animal for a period of at least three months.
+
+
+
+To gain the Anthropology badge you must complete one task from each of A, B and C.
+Anthropology is the fascinating study of the human race. It covers the development of the human societies from prehistoric time through to the future. Your aim is to show that you have an interest in, have learned about, improved your knowledge, and have an understanding in an aspect of Anthropology.
+Range: Prehistory and history, human race, politics, present society,
+culture and religion.
+A INVESTIGATE
+Find out two differing views on how man developed over time.
+Learn legends from three different cultures and tell them to your Patrol.
+Find out about the first Scout camp at Brownsea Island and explain to your Patrol or Troop how Scout camps have changed over the years.
+B SKILL
+With your Patrol or alone, visit a museum and report on a particular culture exhibited there. Perhaps you could make a drawing and then build a model or replica of artifacts or crafts. Plaster modelling can be fun.
+Prepare and deliver an illustrated talk to your Patrol or other audience, using visual aids such as wall charts, any electronic means or a culture item related to your chosen subject.
+C ACTIVITY
+Prepare a meal from a different culture for your Patrol.
+Visit a museum and find out what artifacts have been found from a particular culture. Tell you Patrol how people lived 1000 years ago.
+Construct and demonstrate the use of a tool or utensil from a culture more than 1000 years old.
+
+
+
+
+To gain the Art badge you must complete one task from each of A, B and C.
+Show you have an interest in, have practised and have an improved proficiency in some form of art.
+Range: architecture, painting, drawing, sculpture, carving, pottery, ceramics, and photography.
+A INVESTIGATE
+Find out about an artist of your own choice and discuss the development of their work.
+Find out about the history of an artistic medium of your choice (e.g. sculpture, oil painting, watercolour, portrait painting, pottery, tapestry etc).
+B SKILL
+Learn two of the main techniques used in the art form selected by you.
+Learn the essential materials and tools used in your particular art form.
+C ACTIVITY
+Produce two different items in an art form of your choice and show
+them to your Patrol or Troop.
+
+
+
+To gain the Astronomer badge you must complete one task from each of A, B and C.
+Show you have an interest in, have practised and have an improved proficiency in Astronomy.
+A INVESTIGATE
+Find out about two main stars and one constellation of your choice.
+Find out how to navigate by the stars.
+Find out how to tell time by the stars.
+Know the principal observatories, both optical and radio, in the world.
+B SKILL
+Make a simple astronomical model to illustrate some feature of the solar system.
+Be able to set up a telescope and know the precautions when using it.
+Know the location in the night sky of two constellations.
+C ACTIVITY
+Organize an activity where the stars and constellations you have researched are observed.
+Identify and report on a natural solar system or universe event, e.g. visit by a comet.
+Visit and report on a visit to an observatory.
+
+
+
+To gain the Bushcraft badge you must complete one task from section A, two tasks from section B, and three tasks from section C.
+Show you have an interest in, have practised and have an improved proficiency in some form of Bushcraft.
+A INVESTIGATE
+Find out the origin of map making and the current method of making a map.
+Find out three methods of purifying and straining contaminated water.
+Find out the natural signs used to forecast weather and their meaning.
+B SKILL
+Learn how to make two lengths of rope from natural materials using different methods (e.g. spinning strands and laying up, plaiting etc.).
+Learn how to tell the time and direction by the sun (to an accuracy of fifteen minutes of time and 5 degrees of direction) and the stars (to an accuracy of 30 minutes of time and 10 degrees of direction).
+Learn how to make a satisfactory shelter for two people using either natural materials or only those materials available to you.
+Learn how to prepare and cook a chicken or fish without utensils.
+Learn how to construct a sundial or other gadget to find true north.
+C ACTIVITY
+Demonstrate how to prepare and light a cooking fire in the open and the fire precautions to take.
+Make two lengths or rope from natural materials (or materials available to you).
+Cook a camp meal using only a billy and minimal utensils (e.g. a knife and spoon).
+Sleep in a natural shelter or a shelter made from improvised covering (e.g. tarpaulin).
+Light a fire without using matches.
+Make two camp gadgets from bush materials. NOTE: Due care must be taken so that no permanent damage is done to the bush environment. All rules and regulations of the local authorities must be complied with.
+
+
+
+To complete the Caving badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C.
+Participants must have attained the age of 11 years.
+Caves must be considered horizontal or non-technical, and must not require the use of ladders or abseiling.
+Duration of underground stay must not exceed 4 hours consecutively. All caving activities are to comply to State safety regulations.
+A DEMONSTRATE
+Prior to caving, demonstrate precautions applicable to caving including:
+approaching drops
+the safe distance from drops
+the need to restrain loose hair and clothing
+knowledge of standard communication conventions used in caving.
+B SKILL
+Demonstrate knowledge of:
+tape knot, including tie offs
+figure 8 on a bight
+the correct fitting of a harness
+necessary personal equipment including:
+lighting
+protective clothing and hardware
+the basic rules for the use and care of equipment.
+C ACTIVITY
+Undertake two cave expeditions totalling not less than 6 hours.
+
+
+
+Collector
+To gain the Collector badge you must own and develop a collection for at least four months and complete one task from each of A, B and C.
+Show that you have an interest in, have practised and/or have an improved proficiency in collecting.
+Range: Anything that can be collected can qualify for this badge:, e.g. stamps, signatures, coins, bottles, cards etc.
+A INVESTIGATE
+Find out the history of the subject of your collection.
+Subscribe to a club or magazine that provides information about your collection.
+Find out the meaning of particular terminology relating to your collection.
+B SKILL
+Demonstrate how to organize your collection into particular classes.
+Demonstrate how to care for your collection.
+Show that you understand how to increase your collection by various methods.
+C ACTIVITY
+Give a presentation to your Patrol or Troop on your collection, explaining its history and items of particular significance and how you care for it.
+Explain how other Scouts might begin their collection.
+Give a report to your Adviser on what you have learned about your collection.
+
+
+
+Commerce
+Medium-00000
+To gain the Commerce badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have an improved proficiency in some form of commerce.
+A INVESTIGATE
+Choose a type of commercial product such as food, fashion, cars, electronics, etc.
+Find out how these have changed over time and the various trends. Include photos, drawings, etc.
+B SKILL
+Design a product of your chosen type of commerce. Include drawings and detailed explanations as to why your product has the things it has.
+Draw up a timeline of the changes which have occurred to your chosen type of commerce. Include pictures and drawings.
+C ACTIVITY
+Draw up a Patrol budget for a weekend activity to include food, transport, activities, etc.
+OR
+Design a product and make a video/computer-generated ad to sell your product. Write a script and organize props etc.
+OR
+Research and organize a stock market game in which your friends buy and sell false shares in a false market with real companies. Watch the news for the shares rise and fall each week.
+
+
+
+Cultural Heritage
+Medium-00000
+To gain the Cultural Heritage badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in some aspects of the past, present and future.
+Range: history, religion, human race, politics, native culture and present society.
+A INVESTIGATE
+Find some information on the background of three non-English speaking countries. Compare such things as trade, staple foods, living conditions, etc. in relation to Australia.
+Find out about the traditional way of life of an Australian Aboriginal group including the food they ate, the manner in which it was prepared, family relationships, ceremonies, etc.
+B SKILL
+Learn and practise three greetings from non-English speaking countries of your choice.
+Identify and try traditional foods from cultures or countries other than your own.
+C ACTIVITY
+Make and decorate a boomerang in natural materials. Demonstrate how it should be thrown.
+Demonstrate the three greetings from above and their meanings.
+Prepare and cook a 3-course, traditional meal from a country of your choice.
+
+
+Crime Prevention
+Medium-00000
+To gain the Crime Prevention badge you must complete one task from each of A, B and C.
+A INVESTIGATE
+Investigate and present a report on three crime prevention activities undertaken by the police AND investigate and present a report addressing at least two of the following questions:
+What is Neighbourhood Watch and how do the groups help
+prevent crime?
+Make a list of items of value in your house and explain why you
+should engrave them.
+Why is it important to report crimes to Police?
+B SKILL
+Engrave all items of value in your home with your surname and parent’s licence numbers, with the assistance of one of your parents.
+Design a proforma and list all items of value in your home detailing serial numbers, colours, make, models, and age of the items.
+Enrol your family in Neighbourhood Watch or similar organisation as a means of improving your neighborhood’s safety.
+C ACTIVITY
+Investigate and compile a list of people or organisations who can provide engravers to assist the rest of the Troop to engrave items of value at home (try Police Stations, Neighbourhood Watch etc).
+Arrange for a member of the executive in your local Neighbourhood Watch group (or a Police Officer) to attend to talk to a group of Scouts about preventing crime in the local area.
+Organise and run a security audit with your patrol and identify positive and negative issues at and around your den. If there are any ways you can improve security, make a list of suggestions for your Leader
+
+
+
+Craft
+Medium-00000
+To gain the Craft badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in the craft of choice.
+Range: interior design, mosaics, lapidary, embossing, bookbinding, calligraphy, decorative metal working, leather craft, quilting, die casting, knitting, sewing, crochet. cake decorating, macramé, or any other craft approved by the Troop Council.
+A INVESTIGATE
+Find out the history and development of your particular craft.
+Research the preparation methods needed to perform your particular craft.
+Find out about people skilled in the craft of your choice and discuss the development of their work.
+B SKILL
+Learn at least two main techniques used in your craft of choice.
+Be able to discuss the methods used to perform and complete your particular choice of craft.
+Discuss the type and use usage of materials and tools that are used in your particular craft.
+C ACTIVITY
+Produce and show a completed work of your particular craft
+requiring a minimum of 5 hours to complete the work.
+
+
+
+Community
+Medium-00000
+To gain the Community badge you must complete all the requirements for A, B and C.
+Range: Meals on Wheels, charity food collection and distribution, service clubs, charitable organisations etc.
+A INVESTIGATE
+Discover ways your Group could be of assistance to your chosen organisation, or the community as a whole.
+B SKILL
+Show by your active participation that you have an interest in local community needs other than emergency services.
+C ACTIVITY
+Report to the Troop how you became, and how they could become, more relevant within the community. In the report mention contacts etc. to streamline future activities
+
+
+
+Communication
+Medium-00000
+To gain the Communication badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have an improved proficiency in some form of communication.
+A INVESTIGATE
+Find out about the earliest forms of non-verbal communication. e.g. sign, smoke signals, cave paintings.
+Find out about the history of one particular kind of communication.
+Find out about current developments in international communications.
+Find out about the history of a language other than your own.
+Find out about the latest technology being used for communications (e.g. satellite).
+B SKILL
+Draft, edit and proof read an article for a magazine or paper.
+Learn and use the call signs of the phonetic alphabet for the use on short wave radio, e.g. CB, HF, UHF.
+Learn and use information technology (IT) communication, e.g. e-mail, SMS messaging, Internet chat, satellite.
+Send and receive a message of at least 20 words using semaphore or Morse code.
+In a language other than your own, translate an easy passage from a book or periodical. You can use sign if you wish.
+C ACTIVITY
+Draft, edit and create a news-sheet in any media format for your Patrol, Troop or Group. Include activities that you have undertaken in the past month.
+Help set up an amateur radio base.
+Using walkie-talkies, semaphore or Morse code, organise and run a wide game for your Troop.
+Carry out a simple conversation in a language other than your own.
+Conduct a Patrol Council using telephone/chat room/video conferencing with all of your Patrol at the one time.
+
+
+
+Entertainer
+Medium-00000
+To gain the Entertainer badge you must complete one task from each A, B and C.
+This badge is designed for the Scout with an interest in different aspects of entertaining other than music which is covered by the music badge. This badge covers areas such as ballet, jazz ballet, modern dance, tap dancing, ballroom dancing, poetry recitation, mime, or a part in a video production.
+A INVESTIGATE
+Find out about the origins of your particular field of interest.
+Explain what is meant by particular terminology of your field of interest.
+Make a list of the different types of jobs involved in your particular interest and their roles.
+B SKILL
+Demonstrate or explain to your Leaders and Adviser the various techniques and developments devised for your particular field of interest.
+Create a performance, either solo or in a group, to present to other people.
+C ACTIVITY
+Perform a role in a play, comedy skit, theatrical revue or video production.
+Direct a performance by other people.
+Give a report to your Patrol or Troop on what you have learned about your particular field of interest.
+
+
+
+Fire Awareness
+Medium-00000
+To gain the Fire Awareness badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in fire awareness (fire safety, fire fighting, fire and the environment).
+A INVESTIGATE
+Identify potential fire hazards around the home and the Scout Hall (including bushfire hazards) and explain what can be done to reduce those hazards.
+By use of an illustration, describe the principle of combustion (the fire triangle = fuel + heat + oxygen), and how the elimination of any one of the elements will extinguish the fire.
+Give an example of three different types of combustible material for each of the following properties: solids, liquids and gasses.
+Explain the connection between bushfires and the environment.
+Describe the effects of wildfire on populated areas.
+Research and do a short presentation in a format of your choice to your Patrol or Troop. Write a short essay (300 words) on a major fire disaster in Australia’s history. Suggest action to be taken to ensure that such a catastrophe does not happen again.
+Describe three common causes of bushfires and explain how those causes can be reduced.
+Identify three toxic chemicals that can be produced in a house or building fire.
+Describe two types of bushfires and their characteristics. 1.Show that you understand the fire regulations that apply to your state.
+B SKILL
+As a member of a Patrol, or individually:
+visit either a Metropolitan Fire Brigade (MFB) or a Rural Fire Service/ Brigade, e.g. CFA Station. Describe the type of appliances available and the roles that they play in fighting a fire.
+demonstrate three methods of survival in bush fires.
+describe how you would find out if a total or partial fire ban was in force for a particular area in the your state on any particular day.
+C ACTIVITY
+Carry out the following: ** (SIMULATE only)
+DURING a camp, demonstrate how to prepare a camp cooking fire and a campfire site to reduce the danger of bushfires.
+** DEMONSTRATE how to leave a burning building.
+** DEMONSTRATE the use of a knapsack spray and rakes in fighting a bushfire.
+** DEMONSTRATE how to deal with a leaking LPG lantern bottle which is on fire.
+Explain to your Patrol or other Scouts how to use the fire extinguisher in your Troop meeting place or home, and know on what type of fire it should/should not be used.
+Explain the treatment for minor burns sustained in camp.
+
+
+
+Literary Arts
+Medium-00000
+To gain the Literary Arts badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in literary arts.
+Range: writing, poetry, and public speaking.
+A INVESTIGATE
+Choose one form of literary art to learn about. Gather information about one aspect or a period when a form was popular, e.g. poetry, playwrights, fantasy story writing.
+Learn about the oldest form of literary art that you can find and how it was expressed.
+Find out about a famous writer, e.g. Shakespeare.
+B SKILL
+Learn to write in a particular form of poetry, e.g. Haiku, rhyming, free verse, sonnet, limerick, quatrain, acrostic etc.
+Demonstrate you understand of how a particular form of writing is produced, e.g. play, fantasy fiction, science fiction, TV soap etc.
+C ACTIVITY
+Write a form of poetry and write a short script using Shakespearian language.
+OR
+Write a short novel of at least five chapters after researching how to write a novel.
+
+
+
+Modeller
+Medium-00000
+To gain the Modeller badge you must complete one task from each of A, B and C.
+Show that you have an interest and an improved proficiency in creating models and constructional projects.
+Range: plastics, glasswork, plaster, metal work, wood and fibreglass
+A INVESTIGATE
+For static models, find out why they are used, when they came into common usage and what the components typically are.
+For flight models, have a working knowledge of the basic principles of flight.
+For wheel based models, have a working knowledge of gears, steering, and suspension.
+B SKILL
+Design a model in enough detail for another person to construct the model without your assistance.
+C ACTIVITY
+Construct a model (use of kit permitted) and fly/drive as appropriate.
+Construct a static model (use of kit permitted) and show to an audience.
+
+
+
+Multi Media
+Medium-00000
+To gain the Multi Media badge you must complete one task from each of A, B and C.
+Show that you have an interest in, have practised and have an improved efficiency in the field of multi media.
+Range: pictures, animated graphics, news, websites,
+PowerPoint and computer programming.
+A INVESTIGATE
+Find out about the earliest forms of multi media.
+Find out the history of one particular kind of multi media.
+Find out about the current developments in multi media.
+B SKILL
+Design an interactive CD-ROM, Website or PowerPoint presentation for your Patrol/Troop/Group. The final product is to include pictures, music, animated graphics, media player (e.g. Flash Intro), and news items. You are to include at least five different activities that your Patrol/Troop/Group has been on within your District/Region/Branch or nationally.
+C ACTIVITY
+Create a ‘Welcome’ pack for new Scouts and their families to your Group. You will need to incorporate current news items, section specific information such as age groups, leaders and what they do. Include printable forms for registration.
+
+
+
+Music
+Medium-00000
+To gain the Music badge you must complete one task from each of A, B and C.
+Show that you have an interest in, and have practised and have an improved proficiency in music making. Perhaps take up and gain proficiency in an instrument
+not previously played.
+Range: voice, instrument, percussion, electronic, writing music material.
+A INVESTIGATE
+Investigate the requirements of your chosen field of music, e.g. read music, write music, play an instrument.
+Find out the type of musical instrument you would like to play and the requirements to play this instrument.
+B SKILL
+Write a musical piece.
+Study how to read music.
+Practise the musical instrument of your choice.
+C ACTIVITY
+Perform individually or with a group of musicians on the instrument of your choice in front of your Troop.
+Provide evidence to your Troop that you are able to read and write music.
+
+
+
+Outdoor
+Medium-00000
+To gain the Outdoor badge you must complete one task from each of A, B and C.
+This badge is completed in the outdoors. Show that you have improved your existing skills and learned new skills in outdoor activities.
+Range: camping, hiking, canoeing, sailing, and other outdoor activities of Scouts choice.
+A INVESTIGATE
+Demonstrate an understanding, appropriate to your level of experience, of the main risks, safety precautions and requirements in your chosen area of an outdoor activity.
+B SKILL
+Learn and demonstrate a new skill in your chosen outdoor activity.
+Show your knowledge of your new outdoor activity by organising and participating in a Patrol talk or Troop activity.
+C ACTIVITY
+Over an appropriate period of time, undertake an activity that extends your current level of understanding or ability in your chosen area. Some examples:
+Prepare the necessary equipment for and undertake a two-night camp.
+Over a three-month period, organize two hikes for your Patrol or other Scouts.
+Participate in a canoeing or sailing training program and achieve an appropriate level of competency.
+
+
+
+Performing Arts
+Medium-00000
+To gain the Performing Arts badge you must complete one task from each of A, B and C.
+Range: those areas of performance and entertainment not covered by the Music or Entertainer badges such areas as production, direction, stage design, lighting, sound, script writing, costume design.
+A INVESTIGATE
+Find out the origin of the art form related to your area of interest, e.g. props, sound, lighting, stage design, backstage support, producer, director.
+Identify and describe five elements of your art from that are essential for it to be successful.
+Find out when your art form was first introduced into Australia and by whom.
+B SKILL
+Learn how to create a script for a short play.
+Learn how to prepare lighting for a stage production.
+Learn how to erect a sound system for a stage production.
+Learn how to construct stage props.
+Learn how to prepare music for a stage production.
+Learn how to design a layout for a stage production.
+C ACTIVITY
+Take part in a performance of your art form.
+Write a short skit of about three minutes duration.
+Assist in the preparation of stage props or assist in another backstage support role.
+Produce a short video on a subject of your choice of about five minutes duration.
+Produce a design for a stage production of your choice.
+Assist in the production of a music score for a stage production.
+
+
+
+To gain the Science badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in a field of science.
+Range: physical, chemical science, medicine, biology, botany, zoology, entomology, veterinary science, geography, and geology.
+A INVESTIGATE
+Find out two harmful effects of insect sprays.
+Explain what is meant by the ‘scientific method’.
+Know the native birds and animals found in your area.
+Research a special technique used by experimenters in the scientific field of your choice and be able to explain why the technique is important.
+B SKILL
+Design a game that uses or tests scientific knowledge.
+Know the standard circuit symbols for eight electrical components, e.g. capacitor, earth, etc
+Find the names of and be able to identify 10 native birds and 5 native animals found in your area.
+Describe an experiment illustrating the use of scientific method.
+Understand any dangers or safety requirements associated with a chemical experiment and an experiment with laboratory animals.
+C ACTIVITY
+Produce a game that uses or tests scientific knowledge.
+Construct a rain gauge and wind vane and use them to record weather observations for two weeks.
+Explain how stalactites and stalagmites are formed.
+Visit a scientific laboratory or place where research is carried out.
+
+
+
+To gain the Team Sport badge you must participate in a team sport for at least six months or one season and complete one task from each of A, B and C.
+To make significant progress in a team sport or take up and become proficient at a team sport not previously played by you. Show that you know the rules of the game,
+the penalties, risks and safety regulations.
+Range: team sports
+A INVESTIGATE
+Find out abut the history of your chosen sport.
+Show that you know the rules, penalties, risks and safety precautions related to your chosen sport.
+B SKILL
+Develop the skills necessary to play the sport and discuss how these skills impact on the rest of the team.
+Be able to act as an umpire/referee in your chosen sport.
+C ACTIVITY
+Document your progress within the team and the progress of the team for the season.
+Demonstrate the required skills needed to play as part of the team in your chosen sport.
+Run an activity for your Patrol or Troop demonstrating team play OR give a talk to your Troop or Patrol which will help them understand the elements of your sport and the value of team play.
+
+
+
+Technology
+Medium-00000
+To gain the Technology badge you must complete one task from each of A, B and C.
+Range: all areas of technology not covered in the Information Technology badge such as robotics, vehicle electronics, mechanical devices, radio and tracking devices.
+A INVESTIGATE
+Find out the history and development of one of the following subjects:
+robotics
+vehicle electronics
+GPS
+internal combustion engine
+electronic radio/CB
+mechanical device or system
+any other device or system approved by the Troop Council
+B SKILL
+Show you have a working knowledge of your subject.
+Identify the main parts and have knowledge of its operational system.
+Demonstrate care, cleaning and minor maintenance of the chosen subject.
+C ACTIVITY
+Demonstrate by the use of a simple activity how your subject works.
+Give a talk to your Patrol/Troop on the operating principles of your chosen subject.
+Organise an activity which enables another Scout to be trained in the operation of your device or subject.
+
+
+
+
+Top Rope Climbing
+Medium-00000
+To complete the Top Rope Climbing badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C.
+Participants must have attained the age of 11 years.
+Climb must be single pitch no greater than 15 metres.
+All top rope activities to comply with State safety regulations.
+A DEMONSTRATE
+Prior to climb, demonstrate knowledge of precautions applicable to top rope climbing including:
+approaching cliffs
+safe distance to cliff edge
+the need to restrain loose hair and clothing
+knowledge of standard communication conventions used in top rope climbing.
+B SKILL
+Demonstrate knowledge of the following:
+tape knot, including tie offs
+figure 8 on a bight
+the correct fitting of a harness
+clipping onto the climbing rope
+checking the system and the importance of having a second person check the system
+a mock climb on flat ground
+suitable protective clothing for all seasons
+the importance of using appropriate equipment and ropes
+the basic rules for the use and care of equipment.
+C ACTIVITY
+Undertake five top rope climbs.
+
+
+
+
+Trade
+Medium-00000
+To gain the Trade badge you must complete one task from each of A, B and C.
+Show that you have an interest and an improved proficiency in creating useful objects or constructional projects.
+Range: metalwork, woodwork, brick, stone, carpentry, plumbing, painting, plastics, fibreglass and plastering.
+A INVESTIGATE
+Investigate the types of materials used in a trade of your own choice.
+Investigate the types of materials commonly used in the construction of a building.
+Investigate the materials required for your selected project. Investigate the construction method of the project.
+B SKILL
+Learn how to use and care for hand and power tools.
+Show that you are able to conserve materials on your project.
+C ACTIVITY
+Construct a specific project of your choice within your chosen trade. e.g. construct a dog kennel, Patrol Box.
+Provide materials and costings for your project.
+Demonstrate the use and care for hand and power tools.
+
+
+
+
+World Scouting
+Medium-00000
+To gain the World Scouting badge you must complete one task from each of A, B and C.
+Show you have an interest in, have learnt about and have improved your knowledge in the Worldwide Scouting Family.
+Range: Scouting knowledge of other countries, promote Scouting spirit and knowledge of other Scout badges, badge swapping.
+A INVESTIGATE
+Find out about the first five years of Scouting.
+Who/what is WOSM? What is the role of WOSM and what is Australia’s role?
+Gather information on the Scouting activities of two other countries that may differ to our structure.
+B SKILL
+Knowledge of how to research for the information required for this
+award.
+C ACTIVITY
+Be in regular correspondence with a Scout from another country and discuss with your Patrol the outcomes of your discussions.
+Using natural materials, make a model of the world badge to display in your den.
