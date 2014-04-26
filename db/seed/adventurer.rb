@@ -10,7 +10,7 @@ module Seed
       campcraft      = Award.create(title: 'Adventurer Campcraft', description: '')
       citizenship    = Award.create(title: 'Adventurer Citizenship', description: 'To achieve the Adventurer Citizenship Target, the Scout must complete all the requirements for No’s 1 to 4, together with any three of the remaining five parts.', requirement: 7)
 
-      airactivities  = Award.create(title: 'Adventurer Air Activities', description: '')
+      airactivities  = Award.create(title: 'Adventurer Air Activities', description: '', requirement: 6)
       construction   = Award.create(title: 'Adventurer Construction', description: '')
       emergencies    = Award.create(title: 'Adventurer Emergencies', description: '')
       environment    = Award.create(title: 'Adventurer Environment', description: '', requirement: 5)
@@ -111,6 +111,47 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Using a game or activity instruct your Patrol in the requirements for Pioneer level.')
       Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts, participate in an activity and/or discussion that focuses on the negative effects of drugs, smoking and other substance abuse.')
 
+      activity = Activity.create(:awards => [airactivities], title: 'Recognition')
+      Task.create(activity: activity, order: 1, description: 'Be able to recognise by sight twelve types of aircraft.')
+      Task.create(activity: activity, order: 2, description: 'Recognise and describe the difference between the piston engine and the turbojet engine and show that you understand how the power of these units is adapted to propel an aircraft.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Weather')
+      Task.create(activity: activity, order: 1, description: 'Know the various types of cloud and the weather usually associated with each type, and what effect these formations have upon the flight performance of an aircraft. 1.Find out some of the factors required to estimate the time it would take to cover a certain distance in the air.')
+      Task.create(activity: activity, order: 2, description: 'Show a proficiency in interpreting weather maps.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Theory')
+      Task.create(activity: activity, order: 1, description: 'Describe the correct procedure for radio communication with the control tower or other aircraft on the ground and in the air.')
+      Task.create(activity: activity, order: 2, description: 'Do one of the following: give a talk to your Patrol or Troop for at least five minutes on Australia’s early aviation history, or compile a report on Australia’s aviation pioneers, or find out, by discussion with a commercial pilot or flight instructor, what the main responsibilities are in performance of their work.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Activity', description: 'Arrange to visit a Scout or Air Activity Centre and/or aerodrome.')
+      Task.create(activity: activity, order: 1, description: 'Find out who is responsible for the maintenance of airport services')
+      Task.create(activity: activity, order: 2, description: 'Find out what is the function of a control tower')
+      Task.create(activity: activity, order: 3, description: 'Find out what is the function of an Air Traffic Controller')
+      Task.create(activity: activity, order: 4, description: 'Find out what airlines/aircraft use the aerodrome.')
+      Task.create(activity: activity, order: 5, description: 'Complete five of the tests from one of the following familiarization electives, or complete the aeromodelling task.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Light Aircrift Familiarisation', requirement: 5, required: false)
+      Task.create(activity: activity, order: 1, description: 'Learn how to assist correctly in ground handling of an aircraft and find out the safety precautions required whilst refueling.')
+      Task.create(activity: activity, order: 2, description: 'Describe cockpit checks performed by the pilot prior to takeoff and prior to the landing approach.')
+      Task.create(activity: activity, order: 3, description: 'Describe the primary effect of aircraft controls.')
+      Task.create(activity: activity, order: 4, description: 'Have two flights in a light aircraft.')
+      Task.create(activity: activity, order: 5, description: 'Know and demonstrate an elementary knowledge of aircraft controls – control column, rudder pedals, throttle, flaps, trim tabs, mixture control.')
+      Task.create(activity: activity, order: 6, description: 'With the use of a map, compass and protractor, show how to plot a course between two towns.')
+      Task.create(activity: activity, order: 7, description: 'Know the procedure to adopt in the event of an emergency.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Glider Familiarisation', requirement: 5, required: false)
+      Task.create(activity: activity, order: 1, description: 'Learn and demonstrate handling and parking.')
+      Task.create(activity: activity, order: 2, description: 'Learn and demonstrate launching signals.')
+      Task.create(activity: activity, order: 3, description: 'Act as a satisfactory member of a ground-handling crew in an actual landing.')
+      Task.create(activity: activity, order: 4, description: 'Know the procedure to adopt in the event of an emergency.')
+      Task.create(activity: activity, order: 5, description: 'Have had two flights in a glider.')
+      Task.create(activity: activity, order: 6, description: 'With the use of map, compass and protractor show how to plot a course between two towns.')
+
+      activity = Activity.create(:awards => [airactivities], title: 'Aeromodeling', description: 'Construct two models selected from the following classifications (use of kit permitted). The models shall have the minimum flight times listed below:', required: false)
+      Task.create(activity: activity, order: 1, description: 'glider (hand launched): 17 seconds')
+      Task.create(activity: activity, order: 2, description: 'glider (hand launched): aerobatics')
+      Task.create(activity: activity, order: 3, description: 'rubber powered: one minute')
+      Task.create(activity: activity, order: 4, description: 'engine powered: (maximum 15 seconds motor run) two minutes.')
 
 
 
