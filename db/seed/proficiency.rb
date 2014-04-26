@@ -3,12 +3,6 @@ module Seed
 
     def self.seed
 
-      proficiency = Award.create(title: '', description: '')
-
-      activity = Activity.create(:awards => [proficiency], title: '')
-      Task.create(activity: activity, order: 1, description: '')
-
-
       proficiency = Award.create(title: 'Abseiling', description: 'To gain the Abseiling badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C. Participants must have attained the age of 11 years. Abseil must be single pitch, no greater than 50 metres. All abseiling activities to comply with State safety regulations.')
       activity = Activity.create(:awards => [proficiency], title: 'Demonstrate', description: 'Prior to abseil, demonstrate precautions applicable to abseiling including:')
       Task.create(activity: activity, order: 1, description: 'approaching cliffs')
@@ -42,6 +36,7 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Plan and plant a flower display garden of a least 10 square metres (or a vegetable garden of at least 20 square metres) throughout one complete growing season.', required: false)
       Task.create(activity: activity, order: 2, description: 'Make a compost heap, and understand and explain the principles of manuring, both natural and artificial.', required: false)
 
+
       proficiency = Award.create(title: 'Animal Keeper', description: 'To gain the Animal Keepers badge you must complete one task from each of A, B and C. Show that you have an interest in, have learnt about and have improved your knowledge of caring for an animal. Range: Any animal can qualify for consideration in this badge BUT it must be legal to keep the animal as a domestic pet in your State.')
       activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
       Task.create(activity: activity, order: 1, description: 'Find out the local laws and regulations that relate to how you must keep your animal.', required: false)
@@ -69,7 +64,6 @@ module Seed
       Task.create(activity: activity, order: 3, description: 'Construct and demonstrate the use of a tool or utensil from a culture more than 1000 years old.', required: false)
 
 
-
       proficiency = Award.create(title: 'Art', description: 'To gain the Art badge you must complete one task from each of A, B and C. Show you have an interest in, have practised and have an improved proficiency in some form of art. Range: architecture, painting, drawing, sculpture, carving, pottery, ceramics, and photography.')
       activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
       Task.create(activity: activity, order: 1, description: 'Find out about an artist of your own choice and discuss the development of their work.', required: false)
@@ -79,9 +73,6 @@ module Seed
       Task.create(activity: activity, order: 2, description: 'Learn the essential materials and tools used in your particular art form.', required: false)
       activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
       Task.create(activity: activity, order: 1, description: 'Produce two different items in an art form of your choice and show them to your Patrol or Troop.', required: false)
-
-
-
 
 
       proficiency = Award.create(title: 'Astronomer', description: 'To gain the Astronomer badge you must complete one task from each of A, B and C. Show you have an interest in, have practised and have an improved proficiency in Astronomy.')
@@ -98,9 +89,6 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Organize an activity where the stars and constellations you have researched are observed.', required: false)
       Task.create(activity: activity, order: 2, description: 'Identify and report on a natural solar system or universe event, e.g. visit by a comet.', required: false)
       Task.create(activity: activity, order: 3, description: 'Visit and report on a visit to an observatory.', required: false)
-
-
-
 
 
       proficiency = Award.create(title: 'Bushcraft', description: 'To gain the Bushcraft badge you must complete one task from section A, two tasks from section B, and three tasks from section C. Show you have an interest in, have practised and have an improved proficiency in some form of Bushcraft.')
@@ -123,8 +111,6 @@ module Seed
       Task.create(activity: activity, order: 6, description: 'Make two camp gadgets from bush materials. NOTE: Due care must be taken so that no permanent damage is done to the bush environment. All rules and regulations of the local authorities must be complied with.', required: false)
 
 
-
-
       proficiency = Award.create(title: 'Caving', description: 'To complete the Caving badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C. Participants must have attained the age of 11 years. Caves must be considered horizontal or non-technical, and must not require the use of ladders or abseiling. Duration of underground stay must not exceed 4 hours consecutively. All caving activities are to comply to State safety regulations.')
       activity = Activity.create(:awards => [proficiency], title: 'Demonstrate', description: 'Prior to caving, demonstrate precautions applicable to caving including:')
       Task.create(activity: activity, order: 1, description: 'approaching drops')
@@ -143,9 +129,6 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Undertake two cave expeditions totalling not less than 6 hours.')
 
 
-
-
-
       proficiency = Award.create(title: 'Collector', description: 'To gain the Collector badge you must own and develop a collection for at least four months and complete one task from each of A, B and C. Show that you have an interest in, have practised and/or have an improved proficiency in collecting. Range: Anything that can be collected can qualify for this badge:, e.g. stamps, signatures, coins, bottles, cards etc.')
       activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
       Task.create(activity: activity, order: 1, description: 'Find out the history of the subject of your collection.', required: false)
@@ -159,10 +142,6 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Give a presentation to your Patrol or Troop on your collection, explaining its history and items of particular significance and how you care for it.', required: false)
       Task.create(activity: activity, order: 2, description: 'Explain how other Scouts might begin their collection.', required: false)
       Task.create(activity: activity, order: 3, description: 'Give a report to your Adviser on what you have learned about your collection.', required: false)
-
-
-
-
 
 
       proficiency = Award.create(title: 'Commerce', description: 'To gain the Commerce badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have an improved proficiency in some form of commerce.')
@@ -209,9 +188,6 @@ module Seed
       Task.create(activity: activity, order: 3, description: 'Organise and run a security audit with your patrol and identify positive and negative issues at and around your den. If there are any ways you can improve security, make a list of suggestions for your Leader', required: false)
 
 
-
-
-
       proficiency = Award.create(title: 'Craft', description: 'To gain the Craft badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have improved your knowledge in the craft of choice. Range: interior design, mosaics, lapidary, embossing, bookbinding, calligraphy, decorative metal working, leather craft, quilting, die casting, knitting, sewing, crochet. cake decorating, macramé, or any other craft approved by the Troop Council.')
       activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
       Task.create(activity: activity, order: 1, description: 'Find out the history and development of your particular craft.', required: false)
@@ -225,22 +201,253 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Produce and show a completed work of your particular craft requiring a minimum of 5 hours to complete the work.', required: false)
 
 
-
-
-      proficiency = Award.create(title: '', description: '')
+      proficiency = Award.create(title: 'Community', description: 'To gain the Community badge you must complete all the requirements for A, B and C. Range: Meals on Wheels, charity food collection and distribution, service clubs, charitable organisations etc.')
       activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
-      Task.create(activity: activity, order: 1, description: '', required: false)
+      Task.create(activity: activity, order: 1, description: 'Discover ways your Group could be of assistance to your chosen organisation, or the community as a whole.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Show by your active participation that you have an interest in local community needs other than emergency services.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Report to the Troop how you became, and how they could become, more relevant within the community. In the report mention contacts etc. to streamline future activities.', required: false)
+
+
+      proficiency = Award.create(title: 'Communication', description: 'To gain the Communication badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have an improved proficiency in some form of communication.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out about the earliest forms of non-verbal communication. e.g. sign, smoke signals, cave paintings.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Find out about the history of one particular kind of communication.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Find out about current developments in international communications.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Find out about the history of a language other than your own.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Find out about the latest technology being used for communications (e.g. satellite).', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Draft, edit and proof read an article for a magazine or paper.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Learn and use the call signs of the phonetic alphabet for the use on short wave radio, e.g. CB, HF, UHF.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Learn and use information technology (IT) communication, e.g. e-mail, SMS messaging, Internet chat, satellite.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Send and receive a message of at least 20 words using semaphore or Morse code.', required: false)
+      Task.create(activity: activity, order: 5, description: 'In a language other than your own, translate an easy passage from a book or periodical. You can use sign if you wish.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Draft, edit and create a news-sheet in any media format for your Patrol, Troop or Group. Include activities that you have undertaken in the past month.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Help set up an amateur radio base.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Using walkie-talkies, semaphore or Morse code, organise and run a wide game for your Troop.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Conduct a Patrol Council using telephone/chat room/video conferencing with all of your Patrol at the one time.', required: false)
+
+
+      proficiency = Award.create(title: 'Entertainer', description: 'To gain the Entertainer badge you must complete one task from each A, B and C. This badge is designed for the Scout with an interest in different aspects of entertaining other than music which is covered by the music badge. This badge covers areas such as ballet, jazz ballet, modern dance, tap dancing, ballroom dancing, poetry recitation, mime, or a part in a video production.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out about the origins of your particular field of interest.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Explain what is meant by particular terminology of your field of interest.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Make a list of the different types of jobs involved in your particular interest and their roles.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Demonstrate or explain to your Leaders and Adviser the various techniques and developments devised for your particular field of interest.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Create a performance, either solo or in a group, to present to other people.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Perform a role in a play, comedy skit, theatrical revue or video production.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Direct a performance by other people.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Give a report to your Patrol or Troop on what you have learned about your particular field of interest.', required: false)
+
+
+      proficiency = Award.create(title: 'Fire Awareness', description: 'To gain the Fire Awareness badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have improved your knowledge in fire awareness (fire safety, fire fighting, fire and the environment).')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Identify potential fire hazards around the home and the Scout Hall (including bushfire hazards) and explain what can be done to reduce those hazards.', required: false)
+      Task.create(activity: activity, order: 2, description: 'By use of an illustration, describe the principle of combustion (the fire triangle = fuel + heat + oxygen), and how the elimination of any one of the elements will extinguish the fire.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Give an example of three different types of combustible material for each of the following properties: solids, liquids and gasses.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Explain the connection between bushfires and the environment.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Describe the effects of wildfire on populated areas.', required: false)
+      Task.create(activity: activity, order: 6, description: 'Research and do a short presentation in a format of your choice to your Patrol or Troop. Write a short essay (300 words) on a major fire disaster in Australia’s history. Suggest action to be taken to ensure that such a catastrophe does not happen again.', required: false)
+      Task.create(activity: activity, order: 7, description: 'Describe three common causes of bushfires and explain how those causes can be reduced.', required: false)
+      Task.create(activity: activity, order: 8, description: 'Identify three toxic chemicals that can be produced in a house or building fire.', required: false)
+      Task.create(activity: activity, order: 9, description: 'Describe two types of bushfires and their characteristics. 1.Show that you understand the fire regulations that apply to your state.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', description: 'As a member of a Patrol, or individually', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Visit either a Metropolitan Fire Brigade (MFB) or a Rural Fire Service/ Brigade, e.g. CFA Station. Describe the type of appliances available and the roles that they play in fighting a fire.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Demonstrate three methods of survival in bush fires.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Describe how you would find out if a total or partial fire ban was in force for a particular area in the your state on any particular day.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', description: 'Carry out the following: (* SIMULATE only)', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'DURING a camp, demonstrate how to prepare a camp cooking fire and a campfire site to reduce the danger of bushfires.', required: false)
+      Task.create(activity: activity, order: 2, description: '* DEMONSTRATE how to leave a burning building.', required: false)
+      Task.create(activity: activity, order: 3, description: '* DEMONSTRATE the use of a knapsack spray and rakes in fighting a bushfire.', required: false)
+      Task.create(activity: activity, order: 4, description: '* DEMONSTRATE how to deal with a leaking LPG lantern bottle which is on fire.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Explain to your Patrol or other Scouts how to use the fire extinguisher in your Troop meeting place or home, and know on what type of fire it should/should not be used.', required: false)
+      Task.create(activity: activity, order: 6, description: 'Explain the treatment for minor burns sustained in camp.', required: false)
+
+
+      proficiency = Award.create(title: 'Literary Arts', description: 'To gain the Literary Arts badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have improved your knowledge in literary arts. Range: writing, poetry, and public speaking.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Choose one form of literary art to learn about. Gather information about one aspect or a period when a form was popular, e.g. poetry, playwrights, fantasy story writing.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Learn about the oldest form of literary art that you can find and how it was expressed.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Find out about a famous writer, e.g. Shakespeare.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Learn to write in a particular form of poetry, e.g. Haiku, rhyming, free verse, sonnet, limerick, quatrain, acrostic etc.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Demonstrate you understand of how a particular form of writing is produced, e.g. play, fantasy fiction, science fiction, TV soap etc.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Write a form of poetry and write a short script using Shakespearian language.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Write a short novel of at least five chapters after researching how to write a novel.', required: false)
+
+
+      proficiency = Award.create(title: 'Modeller', description: 'To gain the Modeller badge you must complete one task from each of A, B and C. Show that you have an interest and an improved proficiency in creating models and constructional projects. Range: plastics, glasswork, plaster, metal work, wood and fibreglass')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'For static models, find out why they are used, when they came into common usage and what the components typically are.', required: false)
+      Task.create(activity: activity, order: 2, description: 'For flight models, have a working knowledge of the basic principles of flight.', required: false)
+      Task.create(activity: activity, order: 3, description: 'For wheel based models, have a working knowledge of gears, steering, and suspension.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Design a model in enough detail for another person to construct the model without your assistance.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Construct a model (use of kit permitted) and fly/drive as appropriate.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Construct a static model (use of kit permitted) and show to an audience.', required: false)
+
+
+      proficiency = Award.create(title: 'Multi Media', description: 'To gain the Multi Media badge you must complete one task from each of A, B and C. Show that you have an interest in, have practised and have an improved efficiency in the field of multi media. Range: pictures, animated graphics, news, websites, PowerPoint and computer programming.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out about the earliest forms of multi media.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Find out the history of one particular kind of multi media.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Find out about the current developments in multi media.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Design an interactive CD-ROM, Website or PowerPoint presentation for your Patrol/Troop/Group. The final product is to include pictures, music, animated graphics, media player (e.g. Flash Intro), and news items. You are to include at least five different activities that your Patrol/Troop/Group has been on within your District/Region/Branch or nationally.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Create a ‘Welcome’ pack for new Scouts and their families to your Group. You will need to incorporate current news items, section specific information such as age groups, leaders and what they do. Include printable forms for registration.', required: false)
+
+
+      proficiency = Award.create(title: 'Music', description: 'To gain the Music badge you must complete one task from each of A, B and C. Show that you have an interest in, and have practised and have an improved proficiency in music making. Perhaps take up and gain proficiency in an instrument not previously played. Range: voice, instrument, percussion, electronic, writing music material.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Investigate the requirements of your chosen field of music, e.g. read music, write music, play an instrument.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Find out the type of musical instrument you would like to play and the requirements to play this instrument.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Write a musical piece.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Study how to read music.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Practise the musical instrument of your choice.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Perform individually or with a group of musicians on the instrument of your choice in front of your Troop.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Provide evidence to your Troop that you are able to read and write music.', required: false)
+
+
+      proficiency = Award.create(title: 'Outdoor', description: 'To gain the Outdoor badge you must complete one task from each of A, B and C. This badge is completed in the outdoors. Show that you have improved your existing skills and learned new skills in outdoor activities. Range: camping, hiking, canoeing, sailing, and other outdoor activities of Scouts choice.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Demonstrate an understanding, appropriate to your level of experience, of the main risks, safety precautions and requirements in your chosen area of an outdoor activity.', required: false)
       Task.create(activity: activity, order: 2, description: '', required: false)
       Task.create(activity: activity, order: 3, description: '', required: false)
       activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
-      Task.create(activity: activity, order: 1, description: '', required: false)
-      Task.create(activity: activity, order: 2, description: '', required: false)
+      Task.create(activity: activity, order: 1, description: 'Learn and demonstrate a new skill in your chosen outdoor activity.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Show your knowledge of your new outdoor activity by organising and participating in a Patrol talk or Troop activity.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', description: 'Over an appropriate period of time, undertake an activity that extends your current level of understanding or ability in your chosen area. Some examples:', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Prepare the necessary equipment for and undertake a two-night camp.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Over a three-month period, organize two hikes for your Patrol or other Scouts.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Participate in a canoeing or sailing training program and achieve an appropriate level of competency.', required: false)
+
+
+      proficiency = Award.create(title: 'Performing Arts', description: 'To gain the Performing Arts badge you must complete one task from each of A, B and C. Range: those areas of performance and entertainment not covered by the Music or Entertainer badges such areas as production, direction, stage design, lighting, sound, script writing, costume design.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out the origin of the art form related to your area of interest, e.g. props, sound, lighting, stage design, backstage support, producer, director.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Identify and describe five elements of your art from that are essential for it to be successful.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Find out when your art form was first introduced into Australia and by whom.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Learn how to create a script for a short play.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Learn how to prepare lighting for a stage production.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Learn how to erect a sound system for a stage production.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Learn how to construct stage props.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Learn how to prepare music for a stage production.', required: false)
+      Task.create(activity: activity, order: 6, description: 'Learn how to design a layout for a stage production.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Take part in a performance of your art form.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Write a short skit of about three minutes duration.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Assist in the preparation of stage props or assist in another backstage support role.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Produce a short video on a subject of your choice of about five minutes duration.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Produce a design for a stage production of your choice.', required: false)
+      Task.create(activity: activity, order: 6, description: 'Assist in the production of a music score for a stage production.', required: false)
+
+
+      proficiency = Award.create(title: 'Science', description: 'To gain the Science badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have improved your knowledge in a field of science. Range: physical, chemical science, medicine, biology, botany, zoology, entomology, veterinary science, geography, and geology.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out two harmful effects of insect sprays.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Explain what is meant by the ‘scientific method’.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Know the native birds and animals found in your area.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Research a special technique used by experimenters in the scientific field of your choice and be able to explain why the technique is important.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Design a game that uses or tests scientific knowledge.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Know the standard circuit symbols for eight electrical components, e.g. capacitor, earth, etc', required: false)
+      Task.create(activity: activity, order: 3, description: 'Find the names of and be able to identify 10 native birds and 5 native animals found in your area.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Describe an experiment illustrating the use of scientific method.', required: false)
+      Task.create(activity: activity, order: 5, description: 'Understand any dangers or safety requirements associated with a chemical experiment and an experiment with laboratory animals.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Produce a game that uses or tests scientific knowledge.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Construct a rain gauge and wind vane and use them to record weather observations for two weeks.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Explain how stalactites and stalagmites are formed.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Visit a scientific laboratory or place where research is carried out.', required: false)
+
+
+      proficiency = Award.create(title: 'Team Sport', description: 'To gain the Team Sport badge you must participate in a team sport for at least six months or one season and complete one task from each of A, B and C. To make significant progress in a team sport or take up and become proficient at a team sport not previously played by you. Show that you know the rules of the game, the penalties, risks and safety regulations. Range: team sports')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out abut the history of your chosen sport.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Show that you know the rules, penalties, risks and safety precautions related to your chosen sport.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Develop the skills necessary to play the sport and discuss how these skills impact on the rest of the team.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Be able to act as an umpire/referee in your chosen sport.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Document your progress within the team and the progress of the team for the season.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Demonstrate the required skills needed to play as part of the team in your chosen sport.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Run an activity for your Patrol or Troop demonstrating team play OR give a talk to your Troop or Patrol which will help them understand the elements of your sport and the value of team play.', required: false)
+
+
+      proficiency = Award.create(title: 'Technology', description: 'To gain the Technology badge you must complete one task from each of A, B and C. Range: all areas of technology not covered in the Information Technology badge such as robotics, vehicle electronics, mechanical devices, radio and tracking devices.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', description: 'Find out the history and development of one of the following subjects:', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'robotics', required: false)
+      Task.create(activity: activity, order: 2, description: 'vehicle electronics', required: false)
+      Task.create(activity: activity, order: 3, description: 'GPS', required: false)
+      Task.create(activity: activity, order: 4, description: 'internal combustion engine', required: false)
+      Task.create(activity: activity, order: 5, description: 'electronic radio/CB', required: false)
+      Task.create(activity: activity, order: 6, description: 'mechanical device or system', required: false)
+      Task.create(activity: activity, order: 7, description: 'any other device or system approved by the Troop Council', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Show you have a working knowledge of your subject.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Identify the main parts and have knowledge of its operational system.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Demonstrate care, cleaning and minor maintenance of the chosen subject.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Demonstrate by the use of a simple activity how your subject works.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Give a talk to your Patrol/Troop on the operating principles of your chosen subject.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Organise an activity which enables another Scout to be trained in the operation of your device or subject.', required: false)
+
+
+      proficiency = Award.create(title: 'Top Rope Climbing', description: 'To complete the Top Rope Climbing badge you must complete, with your Patrol or other Scouts and the appropriate qualified persons, all of the requirements for A, B and C. Participants must have attained the age of 11 years. Climb must be single pitch no greater than 15 metres. All top rope activities to comply with State safety regulations.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', description: 'Prior to climb, demonstrate knowledge of precautions applicable to top rope climbing including:')
+      Task.create(activity: activity, order: 1, description: 'approaching cliffs')
+      Task.create(activity: activity, order: 2, description: 'safe distance to cliff edge')
+      Task.create(activity: activity, order: 3, description: 'the need to restrain loose hair and clothing')
+      Task.create(activity: activity, order: 4, description: 'knowledge of standard communication conventions used in top rope climbing.')
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', description: 'Demonstrate knowledge of the following:')
+      Task.create(activity: activity, order: 1, description: 'tape knot, including tie offs')
+      Task.create(activity: activity, order: 2, description: 'figure 8 on a bight')
+      Task.create(activity: activity, order: 3, description: 'the correct fitting of a harness')
+      Task.create(activity: activity, order: 4, description: 'clipping onto the climbing rope')
+      Task.create(activity: activity, order: 5, description: 'checking the system and the importance of having a second person check the system')
+      Task.create(activity: activity, order: 6, description: 'a mock climb on flat ground')
+      Task.create(activity: activity, order: 7, description: 'suitable protective clothing for all seasons')
+      Task.create(activity: activity, order: 8, description: 'the importance of using appropriate equipment and ropes')
+      Task.create(activity: activity, order: 9, description: 'the basic rules for the use and care of equipment.')
+      activity = Activity.create(:awards => [proficiency], title: 'Activity')
+      Task.create(activity: activity, order: 1, description: 'Undertake five top rope climbs.')
+
+
+      proficiency = Award.create(title: 'Trade', description: 'To gain the Trade badge you must complete one task from each of A, B and C. Show that you have an interest and an improved proficiency in creating useful objects or constructional projects. Range: metalwork, woodwork, brick, stone, carpentry, plumbing, painting, plastics, fibreglass and plastering.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Investigate the types of materials used in a trade of your own choice.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Investigate the types of materials commonly used in the construction of a building.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Investigate the materials required for your selected project. Investigate the construction method of the project.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Learn how to use and care for hand and power tools.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Show that you are able to conserve materials on your project.', required: false)
       Task.create(activity: activity, order: 3, description: '', required: false)
       activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
-      Task.create(activity: activity, order: 1, description: '', required: false)
+      Task.create(activity: activity, order: 1, description: 'Construct a specific project of your choice within your chosen trade. e.g. construct a dog kennel, Patrol Box.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Provide materials and costings for your project.', required: false)
+      Task.create(activity: activity, order: 3, description: 'Demonstrate the use and care for hand and power tools.', required: false)
 
 
-
+      proficiency = Award.create(title: 'World Scouting', description: 'To gain the World Scouting badge you must complete one task from each of A, B and C. Show you have an interest in, have learnt about and have improved your knowledge in the Worldwide Scouting Family. Range: Scouting knowledge of other countries, promote Scouting spirit and knowledge of other Scout badges, badge swapping.')
+      activity = Activity.create(:awards => [proficiency], title: 'Investigate', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Find out about the first five years of Scouting.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Who/what is WOSM? What is the role of WOSM and what is Australia’s role?', required: false)
+      Task.create(activity: activity, order: 3, description: 'Gather information on the Scouting activities of two other countries that may differ to our structure.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Skill', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Knowledge of how to research for the information required for this award.', required: false)
+      activity = Activity.create(:awards => [proficiency], title: 'Activity', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Be in regular correspondence with a Scout from another country and discuss with your Patrol the outcomes of your discussions.', required: false)
+      Task.create(activity: activity, order: 2, description: 'Using natural materials, make a model of the world badge to display in your den.', required: false)
 
 
     end
