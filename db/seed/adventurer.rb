@@ -8,7 +8,7 @@ module Seed
       cord       = Award.create(title: 'Adventurer Cord')
 
       campcraft      = Award.create(title: 'Adventurer Campcraft', description: '')
-      citizenship    = Award.create(title: 'Adventurer Citizenship', description: '', requirement: 7)
+      citizenship    = Award.create(title: 'Adventurer Citizenship', description: 'To achieve the Adventurer Citizenship Target, the Scout must complete all the requirements for No’s 1 to 4, together with any three of the remaining five parts.', requirement: 7)
 
       airactivities  = Award.create(title: 'Adventurer Air Activities', description: '')
       construction   = Award.create(title: 'Adventurer Construction', description: '')
@@ -68,6 +68,55 @@ module Seed
 
       activity = Activity.create(:awards => [campcraft], title: 'Camps')
       Task.create(activity: activity, order: 1, description: 'With your Patrol or other Scouts have camped out in tents for minimum of 15 nights.')
+
+
+      activity = Activity.create(:awards => [citizenship], title: 'Values')
+      Task.create(activity: activity, order: 1, description: 'Promise and Law Assist and test a Pioneer Scout in the completion of test 1 of Pioneer Citizenship.')
+      Task.create(activity: activity, order: 2, description: 'Spiritual development: Lead your Patrol in planning and participating in a Scouts’ Own at a Camp or other Troop Activity (such as World Scouts’ Day or a church service).')
+
+      activity = Activity.create(:awards => [citizenship], title: 'First aid')
+      Task.create(activity: activity, order: 1, description: 'Complete a recognized First Aid Course.')
+      Task.create(activity: activity, order: 2, description: 'Assist and test a Scout to pass the First Aid segment of the Pioneer Badge.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate how to deal with fractures to the limbs and collarbone.')
+      Task.create(activity: activity, order: 4, description: 'With another Scout set up and run a \'mock\' emergency to cover at least three of the tasks required in Pioneer and Explorer level and First Aid segment.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Leadership')
+      Task.create(activity: activity, order: 1, description: 'In the Troop Council, or with your Patrol, plan and conduct three activities which will provide opportunities for your Patrol members to learn about leadership and being a productive member of a team.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Good turn', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Assist at a Cub Scout camp or Joey Scout sleepover.')
+      Task.create(activity: activity, order: 2, description: 'Seek out a worthwhile service to others and actively participate for a cumulative period of at least ten hours. If possible, involve members of your Patrol on appropriate occasions, to satisfy their Pioneer or Explorer level requirements.')
+      Task.create(activity: activity, order: 3, description: 'With your Patrol or other Scouts, participate in a community service project for at least 10 hours with a local service club such as Apex, Lions or Rotary. Find out what services the organisation offers to the community.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Heritage', requirement: 1)
+      Task.create(activity: activity, order: 1, description: 'Report on the history, growth and present role of an Australian organisation of your choice. Examples: Royal Flying Doctor Service, Defence Forces, The St. John Ambulance Association.')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts, visit an Australian historical site of national significance, and create a photographic, electronic or video record of your visit. Present this record to your Troop or other Scouts.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Activity', requirement: 2)
+      Task.create(activity: activity, order: 1, description: 'Make regular contact over a three month period of time by e-mail or letter with a Scout or Patrol in another country or other State or Territory. Exchange ideas for games and activities, and use at least one of these games or activities in your Troop program.', required: false)
+      Task.create(activity: activity, order: 2, description: 'With your Patrol, investigate an agency that provides aid and assistance to overseas communities and countries such as Care Australia, Amnesty International, Red Cross International Aid, or World Vision. Find out how you can help them.', required: false)
+      Task.create(activity: activity, order: 3, description: 'With your Patrol or other Scouts, choose an international issue that is making headlines in the media. Research and discuss the issue.', required: false)
+      Task.create(activity: activity, order: 4, description: 'Organise for your Patrol a visit to the seat of either local, state or federal government.', required: false)
+      Task.create(activity: activity, order: 5, description: 'With your Patrol, use the Internet or other sources to find out about Scouting in three other countries and present your findings to the Troop.', required: false)
+
+      activity = Activity.create(:awards => [citizenship], title: 'Community')
+      Task.create(activity: activity, order: 1, description: 'Organise for your Patrol a visit to one of the service facilities outlined in Pioneer Citizenship 7, and understand the contribution made to the community by the organisation selected.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Environment')
+      Task.create(activity: activity, order: 1, description: 'Complete the World Scout Environment Badge')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol participate in a discussion and activity about walking softly in the bush by following the minimum impact code for bushwalking as set down by the National Parks authority in your state or territory.')
+      Task.create(activity: activity, order: 3, description: 'On a hike or camp with your Patrol or with other Scouts, examine the good and bad effects of man on the surrounding environment. Discuss the impact of this and include suggestions for any actions that could be taken to remedy the bad effects.')
+
+      activity = Activity.create(:awards => [citizenship], title: 'Fitness')
+      Task.create(activity: activity, order: 1, description: 'Using a game or activity instruct your Patrol in the requirements for Pioneer level.')
+      Task.create(activity: activity, order: 2, description: 'With your Patrol or other Scouts, participate in an activity and/or discussion that focuses on the negative effects of drugs, smoking and other substance abuse.')
+
+
+
+
+
+
+
 
 
     end
