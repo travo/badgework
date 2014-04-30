@@ -153,6 +153,45 @@ module Seed
       Task.create(activity: activity, order: 3, description: 'rubber powered: one minute')
       Task.create(activity: activity, order: 4, description: 'engine powered: (maximum 15 seconds motor run) two minutes.')
 
+      activity = Activity.create(:awards => [construction], title: 'Planning')
+      Task.create(activity: activity, order: 1, description: 'Sketch and explain how you, along with your Patrol, would go about constructing one of the major projects.')
+      Task.create(activity: activity, order: 2, description: 'Assist and test another Scout to pass the requirements of Explorer Planning 1.')
+
+      activity = Activity.create(:awards => [construction], title: 'Equipment and safety')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate a knowledge of the sizes and strengths of materials (poles, ropes, and tackle) needed to safely build and use the structures specified for a major project.')
+      Task.create(activity: activity, order: 2, description: 'Explain to your Patrol the safety requirements for building and using the structures specified.')
+      Task.create(activity: activity, order: 3, description: 'Explain to your Patrol or other Scouts, the main advantages and disadvantages of different types of ropes, e.g. manila, sisal, nylon, and polypropylene. Include the best method of terminating the ends of these ropes.')
+
+      activity = Activity.create(:awards => [construction], title: 'Knots and structure')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate the knots, splices and lashings in Adventurer Campcraft 1b.')
+      Task.create(activity: activity, order: 2, description: 'Assist and test your Patrol or other Scouts to pass the knots and lashings required in a major project.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate tensioning of ropes with and without pulleys, and rope ladder construction.')
+
+      activity = Activity.create(:awards => [construction], title: 'Organisation and management', description: 'Plan and lead your Patrol or other Scouts in the completion of two of the following major projects:', requirement: 2)
+      Task.create(activity: activity, order: 1, description: 'braced footbridge at least 3m long')
+      Task.create(activity: activity, order: 2, description: 'monkey suspension bridge spanning at least 7m')
+      Task.create(activity: activity, order: 3, description: 'camp table or similar complex piece of camping equipment')
+      Task.create(activity: activity, order: 4, description: 'tower with a platform approximately 3m above the ground')
+      Task.create(activity: activity, order: 5, description: 'ballista/catapult capable of propelling a projectile at least 10m')
+      Task.create(activity: activity, order: 6, description: 'swing bridge suitable of safely carrying each Patrol member across a gap of at least 3m')
+      Task.create(activity: activity, order: 7, description: 'another project of equivalent safety or difficulty approved by Troop Council.')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
