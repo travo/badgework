@@ -177,20 +177,34 @@ module Seed
       Task.create(activity: activity, order: 7, description: 'another project of equivalent safety or difficulty approved by Troop Council.')
 
 
+      activity = Activity.create(:awards => [emergencies], title: 'Recognition')
+      Task.create(activity: activity, order: 1, description: 'Together with a qualified instructor, teach and test your Patrol about eight different types of emergencies and how to react to these emergencies.')
 
+      activity = Activity.create(:awards => [emergencies], title: 'Knowledge')
+      Task.create(activity: activity, order: 1, description: 'To teach and demonstrate the DRABCD Action Plan.')
+      Task.create(activity: activity, order: 2, description: 'Together with a qualified instructor, teach and test your Patrol the correct technique for Cardiopulmonary Resuscitation.')
+      Task.create(activity: activity, order: 3, description: 'Be able to recognise dynamite, gelignite, a detonator, live ammunition, and know what to do if you should find any of these.')
+      Task.create(activity: activity, order: 4, description: 'Be able to recognise hazards posed by sharps (needles, syringes, glass, metal objects).')
+      Task.create(activity: activity, order: 5, description: 'Be able to recognise hazards associated with medications and drugs.')
 
+      activity = Activity.create(:awards => [emergencies], title: 'Visit')
+      Task.create(activity: activity, order: 1, description: 'Organise for your Patrol or other Scouts to visit one of the locations listed in Pioneer 3. This is not to be one of the same locations visited during the earning of the Pioneer and Explorer Levels.')
 
+      activity = Activity.create(:awards => [emergencies], title: 'Treatment')
+      Task.create(activity: activity, order: 1, description: 'Teach your Patrol or other Scouts about the circulation of the blood')
+      Task.create(activity: activity, order: 2, description: 'Teach your Patrol or other Scouts about how to control external bleeding')
+      Task.create(activity: activity, order: 3, description: 'Teach your Patrol or other Scouts about the likely cause, symptoms and treatment of internal bleeding.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate the use of a knapsack spray and rakes in fighting a grass fire.')
+      Task.create(activity: activity, order: 5, description: 'Teach your Patrol the different types of fire extinguishers')
+      Task.create(activity: activity, order: 6, description: 'Teach your Patrol explain on what types of fire each should be used/not used, e.g. electrical, oil.')
+      Task.create(activity: activity, order: 7, description: 'Lead your Patrol or other Scouts in Explorer Emergencies 4 Activity.')
+      Task.create(activity: activity, order: 8, description: 'Set up emergency communications between two points 500m apart and out of sight of each other.')
+      Task.create(activity: activity, order: 9, description: 'Teach and test a Scout at Explorer level how to deal with fractures to the limbs and collarbone.')
+      Task.create(activity: activity, order: 10, description: 'Demonstrate to your Patrol how to treat a sprained ankle.')
+      Task.create(activity: activity, order: 11, description: 'Demonstrate to your Patrol how to treat a patient with an eye injury.')
 
-
-
-
-
-
-
-
-
-
-
+      activity = Activity.create(:awards => [emergencies], title: 'Mock Emergencies')
+      Task.create(activity: activity, order: 1, description: 'Lead your Patrol, or other Scouts, satisfactorily in dealing with two mock emergencies. Some suggestions are: traffic accident; rescue from burning building; search for lost child; near drowning in backyard pool; electrocution; bushfire.')
 
 
 
