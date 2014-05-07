@@ -13,8 +13,8 @@ module Seed
       airactivities  = Award.create(title: 'Adventurer Air Activities', description: '', requirement: 6)
       construction   = Award.create(title: 'Adventurer Construction', description: '')
       emergencies    = Award.create(title: 'Adventurer Emergencies', description: '')
-      environment    = Award.create(title: 'Adventurer Environment', description: '', requirement: 5)
-      wateractivites = Award.create(title: 'Adventurer Water Activities', description: '', requirement: 6)
+      environment    = Award.create(title: 'Adventurer Environment', description: '', requirement: 3)
+      wateractivites = Award.create(title: 'Adventurer Water Activities', description: '', requirement: 4)
       watersafety    = Award.create(title: 'Adventurer Water Safety', description: '')
 
       activity = Activity.create(:awards => [campcraft, construction], title: 'Knots and Lashings')
@@ -207,11 +207,103 @@ module Seed
       Task.create(activity: activity, order: 1, description: 'Lead your Patrol, or other Scouts, satisfactorily in dealing with two mock emergencies. Some suggestions are: traffic accident; rescue from burning building; search for lost child; near drowning in backyard pool; electrocution; bushfire.')
 
 
+      activity = Activity.create(:awards => [environment], title: 'Nature', description: 'Identify where a waterway, or wetland, or river system in a local/national region has been environmentally effected by such as salinity, soil erosion, pollution, introduced species animal, fish or plant.')
+      Task.create(activity: activity, order: 1, description: 'Discuss causes and suggest future actions')
+      Task.create(activity: activity, order: 2, description: 'Suggest an action plan for improvement.')
+
+      activity = Activity.create(:awards => [environment], title: 'Nature', description: 'Participate in a study of a local, national or international:')
+      Task.create(activity: activity, order: 1, description: 'conservation area and discover the habitat and/or fauna species being protected')
+      Task.create(activity: activity, order: 2, description: 'prepare a report on your findings to the Troop.')
+
+      activity = Activity.create(:awards => [environment], title: 'Recycling')
+      Task.create(activity: activity, order: 1, description: 'With your Patrol plan and take a leading role in a recycling project.')
+
+      activity = Activity.create(:awards => [environment], title: 'Recycling', description: 'Lead a group of Scouts in designing and producing an environmental educational presentation (such as poster, demonstration, activity).')
+      Task.create(activity: activity, order: 1, description: 'The presentation should show how humans have had an impact on the wetlands or waterways.')
+      Task.create(activity: activity, order: 2, description: 'What can be done to improve the present situation.')
+      Task.create(activity: activity, order: 3, description: 'Present your findings to your chosen audience.')
+
+      activity = Activity.create(:awards => [environment], title: 'Visit', description: '')
+      Task.create(activity: activity, order: 1, description: 'Plan and visit the origin of the local water supply and learn what purification measures are taken. Make notes on evidence of water pollution, and measures to protect the watershed.')
+
+      activity = Activity.create(:awards => [environment], title: 'Visit', description: 'Plan and visit an organisation devoted to protecting the local, national or international environment.')
+      Task.create(activity: activity, order: 1, description: 'Find out what aspects they cover (such as flora, fauna, vegetation, waterways).')
+      Task.create(activity: activity, order: 2, description: 'Help out on a service activity for a total of twelve hours.')
 
 
+      activity = Activity.create(:awards => [wateractivites], title: 'Weather')
+      Task.create(activity: activity, order: 1, description: 'Instruct and test Pioneer and Explorer level Scouts in the weather requirements for those levels.')
+      Task.create(activity: activity, order: 2, description: 'Show a proficiency in interpreting weather maps.')
+      Task.create(activity: activity, order: 3, description: 'Demonstrate and apply weather forecasting to a water activities event with a duration of two days.')
 
+      activity = Activity.create(:awards => [wateractivites], title: 'Safety')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate proficiency in Explorer Water Activity requirements for Safety.')
+      Task.create(activity: activity, order: 2, description: 'Swim 150 metres whilst wearing a personal flotation device.')
+      Task.create(activity: activity, order: 3, description: 'Be able to remove your clothes in water and then swim 200 metres.')
+      Task.create(activity: activity, order: 4, description: 'Teach Pioneer and Explorer level Scouts the local boating rules applicable to your own region of operation.')
+      Task.create(activity: activity, order: 5, description: 'Teach Pioneer and Explorer level Scouts to understand tides and currents in coastal areas, water behaviours in rivers and creeks.')
+      Task.create(activity: activity, order: 6, description: 'Teach Pioneer and Explorer level Scouts to recognise five common distress signals, at least one each of sight, sound and light.')
+      Task.create(activity: activity, order: 7, description: 'Teach Pioneer and Explorer level Scouts to recognise buoys, beacons and navigation signs used in your region of operation.')
 
+      activity = Activity.create(:awards => [wateractivites], title: 'Seamanship')
+      Task.create(activity: activity, order: 1, description: 'Instruct and act as Adviser for Pioneer and Explorer knots, splices and whippings.')
+      Task.create(activity: activity, order: 2, description: 'Teach Pioneer and Explorer level Scouts the nautical terms generally used in boating.')
+      Task.create(activity: activity, order: 3, description: 'In a craft of your choice, demonstrate getting in and out in deep water and mooring and anchoring.')
+      Task.create(activity: activity, order: 4, description: 'In a craft of your choice, take a leading part in making minor repairs.')
+      Task.create(activity: activity, order: 5, description: 'In a craft of your choice, take a leading part in cleaning and/or painting.')
+      Task.create(activity: activity, order: 6, description: 'In a craft of your choice, take a leading part in correctly loading with crew and stores.')
 
+      activity = Activity.create(:awards => [wateractivites], title: 'Canoeing')
+      Task.create(activity: activity, order: 1, description: 'Pass or have passed all tests prescribed for Explorer level canoeing elective.')
+      Task.create(activity: activity, order: 2, description: 'Demonstrate T and H rescue techniques.')
+      Task.create(activity: activity, order: 3, description: 'Teach Pioneer and Explorer Scouts the sweep forward and reverse, draw, slap, support sculling for support, J stroke, and other requirements for Pioneer and Explorer level.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate how to pack a canoe for an overnight journey.')
+      Task.create(activity: activity, order: 5, description: 'Organise and participate in an overnight canoeing expedition.')
+
+      activity = Activity.create(:awards => [wateractivites], title: 'Sailboarding')
+      Task.create(activity: activity, order: 1, description: 'Pass or have passed all tests prescribed for Explorer level sailboarding elective.')
+      Task.create(activity: activity, order: 2, description: 'Have a good general knowledge of the sport of sailboarding including principles used in the surf.')
+      Task.create(activity: activity, order: 3, description: 'Have participated in the sport for at least a total of 20 hours.')
+
+      activity = Activity.create(:awards => [wateractivites], title: 'Rowing')
+      Task.create(activity: activity, order: 1, description: 'Pass, or have passed, all tests prescribed for Explorer level rowing elective.')
+      Task.create(activity: activity, order: 2, description: 'Teach a Pioneer level Scout the requirements of Rowing.')
+      Task.create(activity: activity, order: 3, description: 'Act as Coxswain and take a pulling boat crew through all Explorer level requirements.')
+      Task.create(activity: activity, order: 4, description: 'Demonstrate ability to anchor and weigh and to free a fouled anchor, including bending the line or cable to an anchor beforehand.')
+      Task.create(activity: activity, order: 5, description: 'Know correct pulling and other orders and demonstrate coming alongside a jetty, to a buoy and hold water, back water and complete short turn around.')
+
+      activity = Activity.create(:awards => [wateractivites], title: 'Sailing')
+      Task.create(activity: activity, order: 1, description: 'Pass, or have passed, all tests prescribed for Explorer level sailing elective.')
+      Task.create(activity: activity, order: 2, description: 'Teach a Pioneer Scout to rig a sailboat.')
+      Task.create(activity: activity, order: 3, description: 'Teach an Explorer Scout how and when to reef down.')
+      Task.create(activity: activity, order: 4, description: 'Teach an Explorer Scout to capsize and recover a small sailboat.')
+      Task.create(activity: activity, order: 5, description: 'Teach your Patrol or other Scouts about the advantages and disadvantages of lee and weather shores.')
+      Task.create(activity: activity, order: 6, description: 'Participate in an overnight sailing expedition.')
+
+      activity = Activity.create(:awards => [wateractivites], title: 'Yachting')
+      Task.create(activity: activity, order: 1, description: 'Yachting Australia course, “Basic Skills 1 – Getting into Small Boat Sailing”.')
+
+      activity = Activity.create(:awards => [wateractivites], title: 'Motor')
+      Task.create(activity: activity, order: 1, description: 'Complete the Yachting Australia TL3 Power Boat Certificate. As legislation requirements differ between States, check with your local governing body regarding these.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Safe entry and swim')
+      Task.create(activity: activity, order: 1, description: 'Perform a forward jump at least three metres into water greater than 1.5 metres deep, fully clothed (long trousers, shirt, jumper, socks, as a minimum) and swim 50 metres. Remove clothing in deep water and demonstrate the use of trousers as a buoyant aid (inflated clothing).')
+      Task.create(activity: activity, order: 2, description: 'Use buoyant aid to support a tired swimmer for one minute, discard aid and tow patient 50 metres, maintaining a clear airway on the patient by correct positioning of the head.')
+      Task.create(activity: activity, order: 3, description: 'Swim 200 metres without an APFD, using at least four different strokes (not less than 25 metres for each stroke).')
+      Task.create(activity: activity, order: 4, description: 'Remain afloat for at least four minutes without the use of an APFD.')
+      Task.create(activity: activity, order: 5, description: 'Put on an APFD in water greater than 1.5 metres deep and swim 100 metres and remove it in water greater than 1.5 metres deep.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Rescue')
+      Task.create(activity: activity, order: 1, description: 'Perform two simulated rescues (situation to be nominated by Adviser). A complete knowledge of noncontact, contact and assisted carries is essential. Knowledge of how to avoid contact with a violent patient and a thorough knowledge of defence methods and releases will be necessary.')
+      Task.create(activity: activity, order: 2, description: 'Knowledge of the techniques needed to perform resuscitation.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Safety')
+      Task.create(activity: activity, order: 1, description: 'Demonstrate a thorough knowledge of the safety rules of one of the following activities: swimming, windsurfing, power boating, water skiing, canoeing, sailing, yachting, board diving, spear fishing and snorkelling.')
+      Task.create(activity: activity, order: 2, description: 'Make a display/poster for your hall/shopping centre on an aspect of water safety.')
+      Task.create(activity: activity, order: 3, description: 'Give a short talk to a group of Cub Scouts on water safety as it applies to them.')
+
+      activity = Activity.create(:awards => [watersafety], title: 'Experience')
+      Task.create(activity: activity, order: 1, description: 'Have passed the requirements of Citizenship 2 at Adventurer Level.')
 
     end
 
