@@ -281,7 +281,7 @@ module Seed
       Task.create(activity: activity, order: 6, description: 'Participate in an overnight sailing expedition.')
 
       activity = Activity.create(:awards => [wateractivites], title: 'Yachting')
-      Task.create(activity: activity, order: 1, description: 'Yachting Australia course, “Basic Skills 1 – Getting into Small Boat Sailing”.')
+      Task.create(activity: activity, order: 1, description: 'Yachting Australia course, "Basic Skills 1 – Getting into Small Boat Sailing".')
 
       activity = Activity.create(:awards => [wateractivites], title: 'Motor')
       Task.create(activity: activity, order: 1, description: 'Complete the Yachting Australia TL3 Power Boat Certificate. As legislation requirements differ between States, check with your local governing body regarding these.')
