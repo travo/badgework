@@ -12,7 +12,7 @@ class Award < ActiveRecord::Base
   end
 
   def completed_dependencies(achievements)
-    activities = achievements.map(&:task).map(&:activity).flatten
+    activities = achievements.extracted_activities
     activities.map do |activity|
       activity if activity.satisfied?(achievements.for_activity(activity))
     end.compact

@@ -5,6 +5,7 @@ class Achievement < ActiveRecord::Base
 
   scope :for_award,    ->(award)    { joins(task: {activity: :awards}).where('activities_awards.award_id = ?', award.id) }
   scope :for_activity, ->(activity) { joins(:task).where('tasks.activity_id = ?', activity.id) }
+  scope :extracted_activities, ->   { all.to_a.map(&:task).map(&:activity).flatten }
 
   def self.for_target(target)
     case target
