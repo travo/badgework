@@ -10,8 +10,10 @@ describe Award do
 
     describe 'when all activities must be completed' do
 
-      let!(:award)  { Award.create(title: 'Test Award', requirement: 3) }
-      let!(:bward)  { Award.create(title: 'Test Award', requirement: 3) }
+      let!(:ultimate) { Award.create(title: 'Significant award') }
+
+      let!(:award)  { Award.create(title: 'Test Award', requirement: 3, prerequisite: ultimate) }
+      let!(:bward)  { Award.create(title: 'Test Award', requirement: 3, prerequisite: ultimate) }
       let!(:a1) { Activity.create(awards: [award], title: 'Activity One', requirement: 1) }
       let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test', required: true)}
       let!(:a2) { Activity.create(awards: [award], title: 'Activity Two', requirement: 1) }
@@ -39,11 +41,16 @@ describe Award do
         member.complete!(t2)
         member.complete!(t3)
         member.complete!(t4)
-
-        # binding.pry
-
         expect(award.send(:completed_dependencies, member.achievements.for_award(award))).not_to include(a4)
         expect(award.send(:completed_dependencies, member.achievements.for_award(award))).to eql([a1, a2, a3])
+      end
+
+      it 'recognises prerequisites correctly' do
+        member.complete!(t1)
+        member.complete!(t2)
+        expect(member.completed?(a1)).to be_true
+        expect(member.completed?(a2)).to be_true
+        expect(member.completed?(ultimate)).to be_true
       end
 
     end
@@ -96,8 +103,6 @@ describe Award do
 
     end
 
-
   end
-
 
 end

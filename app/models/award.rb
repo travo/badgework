@@ -1,5 +1,6 @@
 class Award < ActiveRecord::Base
 
+  belongs_to :prerequisite, class_name: 'Award'
   has_and_belongs_to_many :activities
   accepts_nested_attributes_for :activities
 
