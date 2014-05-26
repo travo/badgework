@@ -5,13 +5,13 @@ describe Activity do
   let!(:troop)  { Troop.create(:name => '5th Brunswick') }
   let!(:scouts) { Section.create(:name => 'Scouts') }
   let!(:member) { Member.create(name: 'Bob')}
-  let!(:award)  { Award.create(title: 'Test Award') }
+  let!(:target)  { Target.create(title: 'Test Award') }
 
   describe 'satisfying completion' do
 
     describe 'when all tasks must be completed' do
 
-      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 3) }
+      let!(:activity) { Activity.create(targets: [target], title: 'Activity One', requirement: 3) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test')}
       let!(:t2) { Task.create(activity: activity, order: 2, description: 'Test')}
       let!(:t3) { Task.create(activity: activity, order: 3, description: 'Test')}
@@ -32,7 +32,7 @@ describe Activity do
 
     describe 'determining requiement when requirement is zero' do
 
-      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 0) }
+      let!(:activity) { Activity.create(targets: [target], title: 'Activity One', requirement: 0) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test', required: true)}
       let!(:t2) { Task.create(activity: activity, order: 2, description: 'Test', required: true)}
       let!(:t3) { Task.create(activity: activity, order: 3, description: 'Test', required: false)}
@@ -58,7 +58,7 @@ describe Activity do
 
     describe 'when one task is compulsory and one (out of two others) optional' do
 
-      let!(:activity) { Activity.create(awards: [award], title: 'Activity One', requirement: 2) }
+      let!(:activity) { Activity.create(targets: [target], title: 'Activity One', requirement: 2) }
       let!(:t1) { Task.create(activity: activity, order: 1, description: 'Test', required: true)}
       let!(:t2) { Task.create(activity: activity, order: 1, description: 'Test', required: false)}
       let!(:t3) { Task.create(activity: activity, order: 1, description: 'Test', required: false)}

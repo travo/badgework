@@ -10,7 +10,7 @@
   .container-fluid
     .span12
       .row
-        = yield(:awards) if content_for?(:awards)
+        = yield(:targets) if content_for?(:targets)
 
-        .span9{ :class => ("offset2 " unless content_for?(:awards)) }
+        .span9{ :class => ("offset2 " unless content_for?(:targets)) }
           = yield

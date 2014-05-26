@@ -1,8 +1,8 @@
-%h1= @award.title
-= @award.description.html_safe
+%h1= @target.title
+= @target.description.html_safe
 
 %ol
-  - @award.activities.each do |activity|
+  - @target.activities.each do |activity|
     %li
       %h4= activity.title
       = activity.description

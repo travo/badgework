@@ -2,11 +2,11 @@ Badgework::Application.routes.draw do
 
   namespace :admin do
     resources :activities
-    resources :awards
+    resources :targets
   end
 
-  resources :awards
+  resources :targets
 
-  root :to => 'awards#index'
+  root :to => 'targets#index'
 
 end

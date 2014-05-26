@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140523111915) do
+ActiveRecord::Schema.define(version: 20140526105614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,22 +41,13 @@ ActiveRecord::Schema.define(version: 20140523111915) do
 
   add_index "activities", ["section_id"], name: "index_activities_on_section_id", using: :btree
 
-  create_table "activities_awards", force: true do |t|
-    t.integer "award_id"
+  create_table "activities_targets", force: true do |t|
+    t.integer "target_id"
     t.integer "activity_id"
   end
 
-  add_index "activities_awards", ["activity_id"], name: "index_activities_awards_on_activity_id", using: :btree
-  add_index "activities_awards", ["award_id"], name: "index_activities_awards_on_award_id", using: :btree
-
-  create_table "awards", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "requirement",     default: 0, null: false
-    t.integer  "prerequisite_id"
-  end
+  add_index "activities_targets", ["activity_id"], name: "index_activities_targets_on_activity_id", using: :btree
+  add_index "activities_targets", ["target_id"], name: "index_activities_targets_on_target_id", using: :btree
 
   create_table "members", force: true do |t|
     t.string   "name"
@@ -75,6 +66,15 @@ ActiveRecord::Schema.define(version: 20140523111915) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "targets", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "requirement",     default: 0, null: false
+    t.integer  "prerequisite_id"
   end
 
   create_table "tasks", force: true do |t|

@@ -9,7 +9,7 @@ class Member < ActiveRecord::Base
   end
 
   def completed?(target)
-    target.satisfied?(achievements.for_target(target))
+    target.satisfied?(achievements.for(target))
   end
 
 end

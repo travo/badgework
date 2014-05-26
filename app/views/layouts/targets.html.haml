@@ -1,0 +1,7 @@
+- content_for :targets do
+  #awards.span3
+    - @targets.each do |target|
+      %h6
+        = link_to(target.title, target)
+
+= render :template => "layouts/application"
