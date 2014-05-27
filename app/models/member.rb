@@ -9,6 +9,16 @@ class Member < ActiveRecord::Base
   end
 
   def completed?(target)
+    if target.is_a?(Target) && target.prerequisites.present?
+      target.prerequisites.all? { |t| target_satisfied?(t) }
+    else
+      target_satisfied?(target)
+    end
+  end
+
+  private
+
+  def target_satisfied?(target)
     target.satisfied?(achievements.for(target))
   end
 

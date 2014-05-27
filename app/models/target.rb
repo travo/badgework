@@ -1,6 +1,7 @@
 class Target < ActiveRecord::Base
 
   belongs_to :prerequisite, class_name: 'Target'
+  has_many :prerequisites, class_name: 'Target', foreign_key: :prerequisite_id
   has_and_belongs_to_many :activities
   accepts_nested_attributes_for :activities
 

@@ -13,7 +13,7 @@ describe Target do
       let!(:ultimate) { Target.create(title: 'Significant award') }
 
       let!(:award)  { Target.create(title: 'Test Award', requirement: 3, prerequisite: ultimate) }
-      let!(:bward)  { Target.create(title: 'Test Award', requirement: 3, prerequisite: ultimate) }
+      let!(:bward)  { Target.create(title: 'Test Award', requirement: 1, prerequisite: ultimate) }
       let!(:a1) { Activity.create(targets: [award], title: 'Activity One', requirement: 1) }
       let!(:t1) { Task.create(activity: a1, order: 1, description: 'Test', required: true)}
       let!(:a2) { Activity.create(targets: [award], title: 'Activity Two', requirement: 1) }
@@ -48,6 +48,8 @@ describe Target do
       it 'recognises prerequisites correctly' do
         member.complete!(t1)
         member.complete!(t2)
+        member.complete!(t3)
+        member.complete!(t4)
         expect(member.completed?(a1)).to be_true
         expect(member.completed?(a2)).to be_true
         expect(member.completed?(ultimate)).to be_true
