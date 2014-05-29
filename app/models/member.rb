@@ -3,23 +3,20 @@ class Member < ActiveRecord::Base
   belongs_to :troop
   belongs_to :section
   has_many :achievements
+  has_many :awards
 
   def complete!(task)
     achievements.create!(task: task, completion_date: Date.today)
   end
 
   def completed?(target)
-    if target.is_a?(Target) && target.prerequisites.present?
-      target.prerequisites.all? { |t| target_satisfied?(t) }
-    else
-      target_satisfied?(target)
-    end
+    result = target.completed?(achievements)
+    award(target) if result && target.is_a?(Target)
+    result
   end
 
-  private
-
-  def target_satisfied?(target)
-    target.satisfied?(achievements.for(target))
+  def award(target)
+    Award.new(target: target, member: self).save
   end
 
 end

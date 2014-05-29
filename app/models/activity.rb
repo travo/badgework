@@ -5,6 +5,10 @@ class Activity < ActiveRecord::Base
 
   include RequiredDependencies
 
+  def completed?(achievements)
+    satisfied?(achievements.for(self))
+  end
+
   private
 
   def dependencies

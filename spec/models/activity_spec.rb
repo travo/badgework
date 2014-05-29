@@ -5,7 +5,7 @@ describe Activity do
   let!(:troop)  { Troop.create(:name => '5th Brunswick') }
   let!(:scouts) { Section.create(:name => 'Scouts') }
   let!(:member) { Member.create(name: 'Bob')}
-  let!(:target)  { Target.create(title: 'Test Award') }
+  let!(:target) { Target.create(title: 'Test Award') }
 
   describe 'satisfying completion' do
 

@@ -7,6 +7,18 @@ class Target < ActiveRecord::Base
 
   include RequiredDependencies
 
+  def completed?(achievements)
+    prerequisites? ? prerequisite_satisfied?(achievements) : satisfied?(achievements.for(self))
+  end
+
+  def prerequisite_satisfied?(achievements)
+    prerequisites.all? { |p| p.satisfied?(achievements.for(p)) }
+  end
+
+  def prerequisites?
+    prerequisites.present?
+  end
+
   private
 
   def dependencies
