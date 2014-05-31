@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     atomic (1.1.15)
+    bower-rails (0.7.3)
     builder (3.1.4)
     coderay (1.1.0)
     coffee-rails (4.0.1)
@@ -42,8 +43,6 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
-    formtastic (2.2.1)
-      actionpack (>= 3.0)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -146,8 +145,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bower-rails
   coffee-rails
-  formtastic
   haml
   jasmine
   jquery-rails

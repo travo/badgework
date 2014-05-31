@@ -4,12 +4,10 @@ gem 'rails', '4.0.3'
 
 gem 'pg'
 gem 'haml'
-gem 'formtastic'
+gem 'bower-rails'
 gem 'jquery-rails'
 gem 'thin'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
@@ -29,4 +27,3 @@ group :test do
   gem 'machinist'
   gem 'shoulda-matchers'
 end
-
