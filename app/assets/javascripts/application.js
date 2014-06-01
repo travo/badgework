@@ -12,5 +12,9 @@
 //
 ////= require jquery
 ////= require jquery_ujs
-//= require bootstrap
+// REQUIRED
+//= require jquery
+//= require ../../../lib/assets/bower_components/angular/angular
+//= require ../../../lib/assets/bower_components/angular-route/angular-route
+//= require ../../../lib/assets/bower_components/angular-resource/angular-resource
 //= require_tree .

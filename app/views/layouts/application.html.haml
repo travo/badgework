@@ -1,16 +1,14 @@
 !!! html
 %head
   %title Badgework
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
+  = stylesheet_link_tag    'application', :media => 'all'
+  = javascript_include_tag 'application'
   = csrf_meta_tags
 
-%body
+%body{'ng-app' => 'badgework'}
 
-  .container-fluid
-    .span12
-      .row
-        = yield(:targets) if content_for?(:targets)
+  %h1
+    {{hello}}
 
-        .span9{ :class => ("offset2 " unless content_for?(:targets)) }
-          = yield
+  %div{'ng-controller' => 'HomeCtrl'}
+    = yield
