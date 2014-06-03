@@ -1,5 +1,8 @@
 class Member < ActiveRecord::Base
 
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
   belongs_to :troop
   belongs_to :section
   has_many :achievements
