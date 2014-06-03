@@ -7,6 +7,7 @@ gem 'haml'
 gem 'bower-rails'
 gem 'jquery-rails'
 gem 'thin'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails'
