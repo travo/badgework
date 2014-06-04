@@ -12,3 +12,8 @@
 
   %div{'ng-controller' => 'HomeCtrl'}
     = yield
+
+
+
+  %footer
+    = link_to('Sign out', destroy_member_session_path, method: :delete)

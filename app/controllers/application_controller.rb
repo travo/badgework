@@ -1,8 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
 
-  def current_user
-    Member.first
-  end
+  protect_from_forgery
 
 end
