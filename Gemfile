@@ -17,6 +17,7 @@ end
 
 group :development, :test do
   gem 'pry'
+  gem 'awesome_print'
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'jasmine'
