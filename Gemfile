@@ -10,6 +10,7 @@ gem 'thin'
 gem 'devise'
 
 group :assets do
+  gem 'requirejs-rails'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'

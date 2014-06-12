@@ -1,0 +1,14 @@
+paths:
+  badgework: "badgework/badgework.js"
+  angular: "angular/angular"
+  angular-route: "angular-route/angular-route"
+  angular-resource: "angular-resource/angular-resource"
+shim:
+  angular:
+    exports: 'angular'
+  'angular-resource':
+    deps: ['angular'],
+  'angular-route':
+    deps: ['angular'],
+  'jQuery':
+    'exports' : 'jQuery'
