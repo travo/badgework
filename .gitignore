@@ -19,3 +19,4 @@
 .idea
 .DS_Store
 design-notes.txt
+vendor/assets/bower_components
