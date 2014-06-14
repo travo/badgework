@@ -1,14 +1,11 @@
 paths:
-  badgework: "badgework/badgework.js"
-  angular: "angular/angular"
-  angular-route: "angular-route/angular-route"
-  angular-resource: "angular-resource/angular-resource"
+  angular: "angular"
+  angularAMD: "angularAMD"
+  angular-route: "angular-route"
 shim:
-  angular:
-    exports: 'angular'
-  'angular-resource':
-    deps: ['angular'],
-  'angular-route':
-    deps: ['angular'],
-  'jQuery':
-    'exports' : 'jQuery'
+  angularAMD:
+    - "angular"
+  angular-route:
+    - "angular"
+deps:
+  - "application"

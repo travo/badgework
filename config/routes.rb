@@ -13,8 +13,6 @@ Badgework::Application.routes.draw do
     resources :targets
   end
 
-  resources :targets
-
   root :to => 'home#index'
 
 end
