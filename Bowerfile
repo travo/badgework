@@ -1,6 +1,0 @@
-group :vendor do
-  asset 'jquery'
-  asset 'angular'
-  asset 'angular-route'
-  asset 'angular-resource'
-end

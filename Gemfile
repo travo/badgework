@@ -4,17 +4,13 @@ gem 'rails', '4.0.3'
 
 gem 'pg'
 gem 'haml'
-gem 'bower-rails'
 gem 'jquery-rails'
 gem 'thin'
 gem 'devise'
-
-group :assets do
-  gem 'requirejs-rails'
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
+gem 'requirejs-rails'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 
 group :development, :test do
   gem 'pry'
