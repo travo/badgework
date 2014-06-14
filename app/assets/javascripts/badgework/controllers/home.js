@@ -1,5 +1,5 @@
-angular
-    .module('badgework', [])
-    .controller('HomeCtrl', ['$scope', function($scope) {
-        $scope.welcome = "Let's do some Badgework";
-    }]);
+define(['application'], function(app) {
+  app.register.controller('HomeController', function($scope) {
+    $scope.welcome = "Ready to do some Badgework?";
+  });
+});
