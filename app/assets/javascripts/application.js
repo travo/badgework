@@ -1,6 +1,6 @@
-define(['angularAMD', 'angular-route'], function(angularAMD) {
+define(['angularAMD', 'angular-route', 'angular-resource'], function(angularAMD) {
 
-  var app = angular.module('badgework', ['ngRoute']);
+  var app = angular.module('badgework', ['ngRoute', 'ngResource']);
 
   app.config(function($routeProvider) {
     $routeProvider.when('/home', angularAMD.route({

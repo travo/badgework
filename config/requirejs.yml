@@ -2,10 +2,13 @@ paths:
   angular: "angular"
   angularAMD: "angularAMD"
   angular-route: "angular-route"
+  angular-resource: "angular-resource"
 shim:
   angularAMD:
     - "angular"
   angular-route:
+    - "angular"
+  angular-resource:
     - "angular"
 deps:
   - "application"
